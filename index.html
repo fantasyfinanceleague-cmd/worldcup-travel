@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Long Haul — World Cup 2026 Group Stage Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0e1a; --ink2:#141a2e; --paper:#f4f1ea; --paper2:#e8e3d6;
+  --line:#2a3147;
+  --hot:#ff3d3d; --hot2:#ff6b35; --gold:#ffd23f; --cyan:#2ee6d6; --grass:#3ddc84; --violet:#9d7cff;
+  --muted:#8a93ab;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink); color:var(--paper);
+  font-family:'Archivo',system-ui,sans-serif; font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:60px}
+nav .brand{font-family:'Anton';font-size:22px;color:var(--gold);letter-spacing:.02em}
+nav .brand span{color:var(--hot)}
+nav .links{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em;transition:color .2s}
+nav a:hover{color:var(--paper)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:90px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,61,61,.18), transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(46,230,214,.14), transparent 45%);
+  z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.kicker{display:inline-block;background:var(--hot);color:#fff;font-weight:800;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:22px}
+.hero h1{font-size:clamp(54px,9vw,128px);color:var(--paper)}
+.hero h1 em{font-style:normal;color:var(--gold);display:block}
+.hero .sub{max-width:620px;margin-top:24px;font-size:19px;color:#cfd4e0}
+.hero .sub strong{color:var(--cyan);font-weight:700}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:48px}
+.stat-strip .s{background:var(--ink2);padding:22px 20px}
+.stat-strip .n{font-family:'Anton';font-size:40px;line-height:1;color:var(--gold)}
+.stat-strip .l{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px}
+.stat-strip .s.alt .n{color:var(--hot2)}
+.stat-strip .s.alt2 .n{color:var(--cyan)}
+
+/* ---------- shareable team card ---------- */
+.tc-wrap{max-width:620px;margin:0 auto}
+.tc-pick{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.tc-pick label{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.tc-pick select{background:var(--ink2);color:var(--fg);border:1px solid var(--line);border-radius:8px;
+  padding:10px 14px;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;cursor:pointer}
+.tcard{position:relative;background:linear-gradient(160deg,#11162a 0%,#0a0e1a 100%);
+  border:1px solid var(--line);border-radius:18px;padding:30px 32px;overflow:hidden}
+.tcard::before{content:'';position:absolute;top:-40%;right:-15%;width:340px;height:340px;
+  background:radial-gradient(circle,rgba(255,210,63,.10),transparent 70%);pointer-events:none}
+.tc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;position:relative}
+.tc-team{font-family:'Anton';font-size:42px;line-height:.95;letter-spacing:.5px}
+.tc-grp{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-top:6px}
+.tc-rank{flex:none;text-align:center;background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.tc-rank .rk{font-family:'Anton';font-size:30px;color:var(--gold);line-height:1}
+.tc-rank .rl{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:3px}
+.tc-hero{margin:22px 0 18px;position:relative}
+.tc-hero .big{font-family:'Anton';font-size:60px;line-height:.9;color:var(--gold)}
+.tc-hero .unit{font-size:20px;color:var(--muted);margin-left:6px}
+.tc-hero .cap{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:6px}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:18px}
+.tc-grid .c{background:var(--ink2);padding:14px 12px;text-align:center}
+.tc-grid .c .v{font-family:'Anton';font-size:24px;color:var(--fg)}
+.tc-grid .c .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:4px}
+.tc-base{font-size:14px;line-height:1.6;position:relative}
+.tc-base .row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line)}
+.tc-base .row:first-child{border-top:none}
+.tc-base .lbl{color:var(--muted)}
+.tc-base .val{font-weight:700;text-align:right}
+.tc-base .val.green{color:var(--grass)}
+.tc-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;
+  font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.tc-actions{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.tc-btn{background:var(--gold);color:#0a0e1a;border:none;border-radius:8px;padding:11px 20px;
+  font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:opacity .15s}
+.tc-btn:hover{opacity:.88}
+.tc-btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.tc-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;min-height:16px}
+@media(max-width:520px){.tc-team{font-size:34px}.tc-hero .big{font-size:46px}}
+
+/* ---------- sections ---------- */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;gap:20px;margin-bottom:14px;flex-wrap:wrap}
+.sec-head .num{font-family:'Anton';font-size:18px;color:var(--hot);
+  border:2px solid var(--hot);border-radius:50%;width:46px;height:46px;
+  display:flex;align-items:center;justify-content:center;flex:none}
+.sec-head h2{font-size:clamp(32px,5vw,56px)}
+.sec-head h2 em{font-style:normal;color:var(--gold)}
+.lead{max-width:760px;color:#cfd4e0;font-size:18px;margin-bottom:36px}
+.lead strong{color:var(--cyan);font-weight:700}
+
+/* ---------- map ---------- */
+.mapbox{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+#flightmap{width:100%;display:block;height:auto;aspect-ratio:960/600}
+.map-controls{display:flex;gap:8px;flex-wrap:wrap;padding:16px;border-bottom:1px solid var(--line);align-items:center}
+.map-controls .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;margin-right:4px}
+select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--line);
+  border-radius:6px;padding:9px 12px;font-family:'Archivo';font-size:14px;font-weight:600;min-width:200px}
+.chip{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:20px;
+  padding:7px 15px;font-family:'Archivo Narrow';font-weight:600;font-size:13px;text-transform:uppercase;
+  letter-spacing:.06em;cursor:pointer;transition:all .18s}
+.chip:hover{color:var(--paper);border-color:var(--muted)}
+.chip.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.map-legend{display:flex;gap:18px;flex-wrap:wrap;padding:14px 16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.map-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.dot-camp{background:var(--gold)}.dot-venue{background:var(--cyan)}
+.arc{stroke:var(--hot);fill:none;opacity:.85;stroke-linecap:round}
+.venue-dot{fill:var(--cyan)}.camp-dot{fill:var(--gold);stroke:var(--ink);stroke-width:1.5}
+.geo{fill:var(--ink2);stroke:var(--line);stroke-width:.6}
+.maplabel{font-family:'Archivo Narrow';font-size:10px;font-weight:600}
+
+/* ---------- group view ---------- */
+.group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.gcard{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:20px 22px;position:relative;overflow:hidden}
+.gcard .gtag{position:absolute;top:0;right:0;font-family:'Anton';font-size:54px;color:rgba(255,255,255,.05);padding:8px 18px;line-height:.8}
+.gcard h3{font-size:24px;color:var(--gold);margin-bottom:4px}
+.gcard .gmeta{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px}
+.trow{display:flex;align-items:center;gap:10px;margin:9px 0}
+.trow .tn{font-weight:700;font-size:14px;width:120px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trow .tbarwrap{flex:1;background:rgba(255,255,255,.06);border-radius:4px;height:14px;overflow:hidden}
+.trow .tbar{height:100%;border-radius:4px}
+.trow .tv{font-family:'Archivo Narrow';font-weight:700;font-size:13px;width:62px;text-align:right;flex:none;color:#cfd4e0}
+.gband{font-size:12px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.gband b{color:var(--hot2);font-weight:700}
+
+/* ---------- draw luck ---------- */
+.dl-toggle{display:flex;gap:8px;margin-bottom:26px}
+.dl-explain{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:34px}
+.dl-explain .b{background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.dl-explain .b .h{font-family:'Anton';font-size:17px;margin-bottom:8px}
+.dl-explain .b.floor .h{color:var(--cyan)}
+.dl-explain .b.pen .h{color:var(--hot)}
+.dl-explain .b.tot .h{color:var(--gold)}
+.dl-explain .b p{font-size:14px;color:#bcc3d4;line-height:1.5}
+.dlrow{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.dlrow .rk{font-family:'Anton';font-size:15px;color:var(--muted);width:26px;text-align:right;flex:none}
+.dlrow .nm{font-weight:700;font-size:15px;width:150px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dlrow .nm small{color:var(--muted);font-weight:600}
+.dlrow .stack{flex:1;height:22px;background:rgba(255,255,255,.05);border-radius:5px;overflow:hidden;display:flex}
+.dlrow .seg-floor{background:var(--cyan);height:100%}
+.dlrow .seg-pen{background:var(--hot);height:100%}
+.dlrow .seg-saved{background:var(--grass);height:100%}
+.dlrow .seg-spread{background:linear-gradient(90deg,var(--cyan),var(--hot2));height:100%;border-radius:5px}
+.dl-note{background:linear-gradient(135deg,rgba(46,230,214,.12),rgba(255,107,53,.06));
+  border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:15px;
+  line-height:1.6;color:#cfd4e0;margin-bottom:26px}
+.dl-note b{color:var(--fg)}
+.dl-star{color:var(--gold);font-weight:700}
+.dlrow .amt{font-family:'Archivo Narrow';font-weight:700;font-size:14px;width:96px;text-align:right;flex:none}
+.dlrow .amt.pos{color:var(--hot2)}.dlrow .amt.neg{color:var(--grass)}
+.dl-legend{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;font-size:13px;color:var(--muted)}
+.dl-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* ---------- best base ---------- */
+.bb-mapwrap{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:22px}
+.bb-readout{font-family:'Archivo Narrow';font-size:14px;color:#cfd4e0;text-align:center;padding:8px 4px 4px;min-height:22px}
+.bb-readout b{color:var(--gold)}
+.bb-grid{display:grid;grid-template-columns:1fr;gap:6px}
+.bbrow{display:flex;align-items:center;gap:14px;background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:12px 16px;cursor:pointer;transition:border-color .16s,background .16s}
+.bbrow:hover{border-color:var(--muted)}
+.bbrow.sel{border-color:var(--gold);background:#1a1e2e}
+.bbrow .bbrk{font-family:'Anton';font-size:18px;color:var(--muted);width:30px;text-align:right;flex:none}
+.bbrow .bbteam{font-weight:700;min-width:120px;flex:none}
+.bbrow .bbmove{flex:1;font-size:14px;color:#cfd4e0;min-width:0}
+.bbrow .bbmove .from{color:var(--hot2)}
+.bbrow .bbmove .to{color:var(--grass);font-weight:700}
+.bbrow .bbmove .arr{color:var(--muted);margin:0 8px}
+.bbrow .bbsave{font-family:'Archivo Narrow';font-weight:700;font-size:15px;color:var(--grass);width:120px;text-align:right;flex:none}
+.bbrow.opt{opacity:.7}
+.bbrow.opt .bbsave{color:var(--cyan)}
+.bbrow .bbtag{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--cyan);border:1px solid var(--cyan);border-radius:20px;padding:2px 9px;white-space:nowrap}
+@media(max-width:620px){.bbrow{flex-wrap:wrap;gap:6px 10px}.bbrow .bbmove{flex-basis:100%;order:3}.bbrow .bbsave{width:auto}}
+
+/* ---------- ranked list ---------- */
+.rank-controls{display:flex;gap:8px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
+.rrow{background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:13px 16px;margin-bottom:6px;cursor:pointer;transition:border-color .18s}
+.rrow:hover{border-color:var(--muted)}
+.rrow .top{display:flex;align-items:center;gap:12px}
+.rrow .rk{font-family:'Anton';font-size:20px;color:var(--muted);width:34px;text-align:right;flex:none}
+.rrow .nm{font-weight:700;font-size:16px;flex:1}
+.rrow .nm small{color:var(--muted);font-weight:600;margin-left:4px}
+.rrow .val{font-family:'Anton';font-size:22px;color:var(--gold)}
+.rrow .val small{font-family:'Archivo';font-size:12px;color:var(--muted);font-weight:600}
+.rrow .barwrap{margin-top:9px;height:7px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
+.rrow .bar{height:100%;background:linear-gradient(90deg,var(--hot2),var(--hot));border-radius:4px}
+.rrow .detail{margin-top:14px;padding-top:13px;border-top:1px solid var(--line);display:none}
+.rrow.open .detail{display:block}
+.rrow .detail .dl-line{font-size:14px;color:#cfd4e0;margin:5px 0}
+.rrow .detail .dl-line i{color:var(--cyan);font-style:normal;font-weight:700}
+.rrow .detail .camp{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+
+/* ---------- methodology ---------- */
+.method{columns:2;column-gap:40px}
+.method p{margin-bottom:16px;break-inside:avoid;font-size:15px;color:#bcc3d4}
+.method h3{font-size:18px;color:var(--gold);margin-bottom:10px;break-inside:avoid}
+.method code{background:var(--ink2);padding:2px 7px;border-radius:4px;font-size:13px;color:var(--cyan)}
+.src{font-size:13px;color:var(--muted)}.src a{color:var(--cyan)}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:13px}
+.callout{background:linear-gradient(135deg,rgba(255,61,61,.12),rgba(255,107,53,.06));
+  border:1px solid var(--hot);border-radius:12px;padding:22px 26px;margin:30px 0;font-size:16px}
+.callout b{color:var(--gold)}
+
+@media(max-width:780px){
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  .dl-explain{grid-template-columns:1fr}
+  .method{columns:1}
+  nav .links{display:none}
+  .trow .tn{width:90px}
+}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">THE LONG <span>HAUL</span></div>
+  <div class="links">
+    <a href="#card">Team card</a>
+    <a href="#map">Map</a>
+    <a href="#groups">Groups</a>
+    <a href="#drawluck">Draw luck</a>
+    <a href="#bestbase">Best base</a>
+    <a href="#ranking">Ranking</a>
+    <a href="#method">Method</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">FIFA World Cup 2026 · Group Stage</span>
+  <h1>Who flies<br>the <em>farthest?</em></h1>
+  <p class="sub">For each of the 48 teams we measured the distance from its base camp to all three group-stage venues and added them up — a clean <strong>total distance to their matches</strong>, no routing assumptions. The biggest numbers aren't about a brutal draw. They're about <strong>where teams chose to sleep.</strong></p>
+  <div class="stat-strip" id="heroStats"></div>
+</div></header>
+
+<section id="card"><div class="wrap">
+  <div class="sec-head"><div class="num">01</div><h2>Your team's <em>travel card</em></h2></div>
+  <div class="tc-wrap">
+    <div class="tc-pick">
+      <label for="tcSel">Pick a team</label>
+      <select id="tcSel"></select>
+    </div>
+    <div class="tcard" id="tcard"></div>
+    <div class="tc-actions">
+      <button class="tc-btn" id="tcCopy">Copy summary</button>
+      <button class="tc-btn ghost" id="tcShare">Share</button>
+    </div>
+    <div class="tc-note" id="tcNote"></div>
+  </div>
+</div></section>
+
+<section id="map"><div class="wrap">
+  <div class="sec-head"><div class="num">02</div><h2>The <em>flight map</em></h2></div>
+  <p class="lead">Pick a team to see the distance from its base camp to each of its three matches. Gold dots are base camps; cyan dots are stadiums. A venue played twice is marked ×2 and counts twice in the total. In group view, hover or tap a gold dot to see which team is based there.</p>
+  <div class="mapbox">
+    <div class="map-controls">
+      <span class="lbl">View</span>
+      <select class="teamsel" id="teamSel"></select>
+      <span class="lbl" style="margin-left:8px">or group</span>
+      <span id="groupChips"></span>
+    </div>
+    <svg id="flightmap" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;aspect-ratio:960/600;min-height:400px" role="img" aria-label="Map of North America showing base camps and match venues with flight arcs"></svg>
+    <div class="map-legend">
+      <span><i class="dot-camp"></i>Base camp</span>
+      <span><i class="dot-venue"></i>Match venue</span>
+      <span style="color:var(--hot)">— Base camp to venue</span>
+      <span id="mapReadout" style="margin-left:auto;color:var(--gold);font-weight:700"></span>
+    </div>
+  </div>
+</div></section>
+
+<section id="groups"><div class="wrap">
+  <div class="sec-head"><div class="num">03</div><h2>The <em>fair</em> comparison</h2></div>
+  <p class="lead">Within a group, all four teams play the same six matches in the same cities — so comparing them <strong>isolates base-camp choice</strong>. Bars show each team's total distance to its matches. Each group is also tagged with its <strong>draw difficulty</strong> — how spread-out its six host cities are, regardless of where anyone chose to base.</p>
+  <div class="group-grid" id="groupGrid"></div>
+</div></section>
+
+<section id="drawluck"><div class="wrap">
+  <div class="sec-head"><div class="num">04</div><h2>Luck of the <em>draw</em></h2></div>
+  <p class="lead">Before any team picks where to sleep, the draw deals them a geography. Some groups are tight clusters; others are flung across the continent. This is pure luck — how far apart a team's three host cities are, measured with no base-camp choices involved. The wider the spread, the harder the trip was always going to be. Three patterns show up: <strong>27 teams</strong> play three different cities; <strong>7 play one city twice but non-consecutively</strong> — there, away, then back (marked <span class="dl-star">*</span>); and <strong>14 play one city twice back-to-back</strong>, a genuine stay-put break (marked <span class="dl-star">**</span>). For the repeats, the spread counts that city's distance for both visits, since it's a trip they make either way.</p>
+  <div class="dl-note" id="dlCallout"></div>
+  <div id="dlList"></div>
+</div></section>
+
+<section id="bestbase"><div class="wrap">
+  <div class="sec-head"><div class="num">05</div><h2>The base they <em>should have</em> picked</h2></div>
+  <p class="lead">If each team had based at the real training facility that minimises travel to its three matches — drawn from a catalogue of ~155 pro grounds (MLS, USL, Liga MX), major university athletic complexes, and elite prep sites — which would it be, and how far is that from where they actually set up? Tap any team to see the move. The gap is the <strong>self-inflicted</strong> distance, made concrete.</p>
+  <div class="bb-mapwrap">
+    <svg id="bbMap" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet" style="width:100%;aspect-ratio:960/600;min-height:340px"></svg>
+    <div class="bb-readout" id="bbReadout">Tap a team below to see where they should have based.</div>
+  </div>
+  <div class="bb-grid" id="bbGrid"></div>
+  <p class="lead" style="margin-top:24px;font-size:15px;color:var(--muted)">We snap each team's travel-minimising location to the nearest real, verifiable training facility in our catalogue (excluding facilities in the team's own match cities). It's the closest <em>catalogued</em> elite base, not a claim about every facility that exists. For 14 teams it sits within 100 km of where they actually based — they nailed it.</p>
+</div></section>
+
+<section id="ranking"><div class="wrap">
+  <div class="sec-head"><div class="num">06</div><h2>The full <em>ranking</em></h2></div>
+  <p class="lead">All 48 teams, sortable. Tap any row to expand the distance to each of its three matches. Remember: flight hours assume every leg is flown — short Mexican and Californian hops would really be driven.</p>
+  <div class="rank-controls">
+    <span class="lbl" style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600">Rank by</span>
+    <button class="chip on" data-m="km">Total distance</button>
+    <button class="chip" data-m="f">Flight hours</button>
+    <button class="chip" data-m="tz">Time zones</button>
+  </div>
+  <div id="rankList"></div>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <div class="sec-head"><div class="num">07</div><h2>Method &amp; <em>sources</em></h2></div>
+  <div class="method">
+    <h3>The travel model</h3>
+    <p>Each team's total is the sum of three distances: from its base camp to the venue of each of its three group-stage matches. It deliberately makes no assumptions about routing or return trips — it's simply how far each match is from home, added together. If you want to picture round trips, double it; if a team stays regional between matches, the real figure is lower. This measure stays out of that debate.</p>
+    <p>When two of a team's matches are at the same venue, that distance appears twice in the sum (marked ×2), because they make that trip for both matches. The measure captures the spread of a team's assignments from its home base, not the precise journey it flies.</p>
+    <h3>Distance</h3>
+    <p>Great-circle (haversine) distance between coordinates, in kilometres. This is straight-line "as the crow flies" — real routings are slightly longer.</p>
+    <h3>Flight hours</h3>
+    <p>An illustrative estimate: <code>0.75 h + km / 800</code> for each of the three base-to-venue legs, summed. It assumes every leg is flown. Several short legs (e.g. Mexico City–Guadalajara at ~470 km) would realistically be ground travel, so treat flight hours as illustrative rather than literal.</p>
+    <h3>Time zones</h3>
+    <p>The maximum number of time-zone boundaries crossed on any single leg, DST-adjusted for June 2026. Because the host geography is US-heavy, most teams stay within one or two zones — so this metric separates teams less sharply than distance.</p>
+    <h3>The floor &amp; penalty</h3>
+    <p>The "floor" is the route distance a team would face if based at the geographic centroid of its three venues — the best feasible base camp given its fixtures, using the same routing rule. The "penalty" is actual minus floor. Negative penalties mean a base camp beat the centroid by hugging clustered venues.</p>
+    <h3>Sources</h3>
+    <p class="src">Match schedule: official FIFA fixture list (uploaded), cross-checked against the published NBC Sports schedule. Base camps: U.S. Soccer's confirmed Team Base Camp list. Stadium and base-camp coordinates geocoded to venue/town centroids — distances are precise to within a few kilometres, not metres.</p>
+    <p class="src">A note on framing: this analysis measures real base-camp-to-match travel, which blends the draw with each team's own siting decision. It is <em>not</em> a measure of which teams got the hardest schedule — section 03 separates those.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  Built as an independent data analysis · Not affiliated with FIFA · Distances are great-circle estimates · June 2026
+</div></footer>
+
+<script>const DATA={"teams": [{"code": "CUW", "t": "Curaçao", "g": "E", "b": "Boca Raton, FL", "blat": 26.3683, "blon": -80.1289, "km": 5059, "f": 8.6, "tz": 1, "actual": 5059, "floor": 2802, "pen": 2257, "venues": [{"v": "Houston", "n": 1, "km": 1543, "tz": 1, "lat": 29.6847, "lon": -95.4107}, {"v": "Kansas City", "n": 1, "km": 1942, "tz": 1, "lat": 39.0489, "lon": -94.4839}, {"v": "Philadelphia", "n": 1, "km": 1573, "tz": 0, "lat": 39.9008, "lon": -75.1675}], "idealCity": "Columbia, MO", "idealLat": 38.9404, "idealLon": -92.3277, "idealKm": 2730, "idealSaving": 2329, "idealOptimal": false, "idealFacility": "University of Missouri", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1657, "crunchGap": 5, "crunchPerDay": 331, "crunchRank": 17, "spread": 4864, "maxHop": 2162, "spreadRank": 9, "repeatVenue": null, "venueCat": "none"}, {"code": "AUT", "t": "Austria", "g": "J", "b": "Santa Barbara, CA", "blat": 34.414, "blon": -119.8489, "km": 4805, "f": 8.3, "tz": 2, "actual": 4805, "floor": 3268, "pen": 1537, "venues": [{"v": "SF Bay Area", "n": 1, "km": 383, "tz": 0, "lat": 37.403, "lon": -121.97}, {"v": "Dallas", "n": 1, "km": 2112, "tz": 2, "lat": 32.7473, "lon": -97.0945}, {"v": "Kansas City", "n": 1, "km": 2310, "tz": 2, "lat": 39.0489, "lon": -94.4839}], "idealCity": "Norman, OK", "idealLat": 35.2059, "idealLon": -97.4457, "idealKm": 2982, "idealSaving": 1823, "idealOptimal": false, "idealFacility": "University of Oklahoma", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-27"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2315, "crunchGap": 6, "crunchPerDay": 386, "crunchRank": 12, "spread": 5453, "maxHop": 2399, "spreadRank": 3, "repeatVenue": null, "venueCat": "none"}, {"code": "BIH", "t": "Bosnia & Herzegovina", "g": "B", "b": "Sandy, UT", "blat": 40.5649, "blon": -111.8389, "km": 4756, "f": 8.2, "tz": 2, "actual": 4756, "floor": 4922, "pen": -165, "venues": [{"v": "Toronto", "n": 1, "km": 2679, "tz": 2, "lat": 43.6332, "lon": -79.4185}, {"v": "Los Angeles", "n": 1, "km": 933, "tz": 1, "lat": 33.9535, "lon": -118.3392}, {"v": "Seattle", "n": 1, "km": 1144, "tz": 1, "lat": 47.5952, "lon": -122.3316}], "idealCity": "Salt Lake City, UT", "idealLat": 40.7649, "idealLon": -111.8421, "idealKm": 4751, "idealSaving": 5, "idealOptimal": true, "idealFacility": "University of Utah", "idealTier": "NCAA", "matchDates": ["2026-06-12", "2026-06-18", "2026-06-24"], "gap1": 6, "gap2": 6, "minGap": 6, "span": 12, "crunchKm": 3504, "crunchGap": 6, "crunchPerDay": 584, "crunchRank": 3, "spread": 8381, "maxHop": 3504, "spreadRank": 1, "repeatVenue": null, "venueCat": "none"}, {"code": "ENG", "t": "England", "g": "L", "b": "Kansas City, MO", "blat": 39.0997, "blon": -94.5786, "km": 4486, "f": 7.9, "tz": 1, "actual": 4486, "floor": 3146, "pen": 1340, "venues": [{"v": "Dallas", "n": 1, "km": 742, "tz": 0, "lat": 32.7473, "lon": -97.0945}, {"v": "Boston", "n": 1, "km": 1990, "tz": 1, "lat": 42.0909, "lon": -71.2643}, {"v": "New York NJ", "n": 1, "km": 1754, "tz": 1, "lat": 40.8136, "lon": -74.0744}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 2554, "idealSaving": 1932, "idealOptimal": false, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 2494, "crunchGap": 6, "crunchPerDay": 416, "crunchRank": 9, "spread": 4997, "maxHop": 2494, "spreadRank": 5, "repeatVenue": null, "venueCat": "none"}, {"code": "JOR", "t": "Jordan", "g": "J", "b": "Portland, OR", "blat": 45.5152, "blon": -122.6784, "km": 4414, "f": 7.8, "tz": 2, "actual": 4414, "floor": 3083, "pen": 1331, "venues": [{"v": "SF Bay Area", "n": 2, "km": 904, "tz": 0, "lat": 37.403, "lon": -121.97}, {"v": "Dallas", "n": 1, "km": 2606, "tz": 2, "lat": 32.7473, "lon": -97.0945}], "idealCity": "Alameda, CA", "idealLat": 37.7652, "idealLon": -122.2416, "idealKm": 2436, "idealSaving": 1978, "idealOptimal": false, "idealFacility": "Oakland Roots Training Facility", "idealTier": "Pro", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-27"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2315, "crunchGap": 5, "crunchPerDay": 463, "crunchRank": 8, "spread": 4630, "maxHop": 2315, "spreadRank": 14, "repeatVenue": "SF Bay Area", "venueCat": "b2b"}, {"code": "CZE", "t": "Czechia", "g": "A", "b": "Mansfield, TX", "blat": 32.5632, "blon": -97.1417, "km": 4143, "f": 7.4, "tz": 1, "actual": 4143, "floor": 3074, "pen": 1068, "venues": [{"v": "Guadalajara", "n": 1, "km": 1462, "tz": 1, "lat": 20.6817, "lon": -103.4628}, {"v": "Atlanta", "n": 1, "km": 1193, "tz": 1, "lat": 33.7554, "lon": -84.4008}, {"v": "Mexico City", "n": 1, "km": 1488, "tz": 1, "lat": 19.3029, "lon": -99.1505}], "idealCity": "Querétaro, QRO", "idealLat": 20.5888, "idealLon": -100.3899, "idealKm": 2663, "idealSaving": 1480, "idealOptimal": false, "idealFacility": "Querétaro / Corregidora", "idealTier": "LigaMX", "matchDates": ["2026-06-11", "2026-06-18", "2026-06-24"], "gap1": 7, "gap2": 6, "minGap": 6, "span": 13, "crunchKm": 2171, "crunchGap": 6, "crunchPerDay": 362, "crunchRank": 13, "spread": 5020, "maxHop": 2373, "spreadRank": 4, "repeatVenue": null, "venueCat": "none"}, {"code": "NZL", "t": "New Zealand", "g": "G", "b": "San Diego, CA", "blat": 32.7157, "blon": -117.1611, "km": 3989, "f": 7.2, "tz": 0, "actual": 3989, "floor": 2330, "pen": 1659, "venues": [{"v": "Los Angeles", "n": 1, "km": 176, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "Vancouver", "n": 2, "km": 1907, "tz": 0, "lat": 49.2768, "lon": -123.112}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 1798, "idealSaving": 2191, "idealOptimal": false, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1749, "crunchGap": 6, "crunchPerDay": 292, "crunchRank": 25, "spread": 3497, "maxHop": 1749, "spreadRank": 24, "repeatVenue": "Vancouver", "venueCat": "b2b"}, {"code": "JPN", "t": "Japan", "g": "F", "b": "Nashville, TN", "blat": 36.1627, "blon": -86.7816, "km": 3768, "f": 7.0, "tz": 1, "actual": 3768, "floor": 1125, "pen": 2643, "venues": [{"v": "Dallas", "n": 2, "km": 1018, "tz": 0, "lat": 32.7473, "lon": -97.0945}, {"v": "Monterrey", "n": 1, "km": 1732, "tz": 1, "lat": 25.6694, "lon": -100.2444}], "idealCity": "Fort Worth, TX", "idealLat": 32.7092, "idealLon": -97.3628, "idealKm": 882, "idealSaving": 2886, "idealOptimal": false, "idealFacility": "TCU", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 844, "crunchGap": 5, "crunchPerDay": 169, "crunchRank": 35, "spread": 1688, "maxHop": 844, "spreadRank": 36, "repeatVenue": "Dallas", "venueCat": "nonconsec"}, {"code": "TUR", "t": "Türkiye", "g": "D", "b": "Mesa, AZ", "blat": 33.4152, "blon": -111.8315, "km": 3619, "f": 6.8, "tz": 0, "actual": 3619, "floor": 2081, "pen": 1538, "venues": [{"v": "Vancouver", "n": 1, "km": 1994, "tz": 0, "lat": 49.2768, "lon": -123.112}, {"v": "SF Bay Area", "n": 1, "km": 1019, "tz": 0, "lat": 37.403, "lon": -121.97}, {"v": "Los Angeles", "n": 1, "km": 605, "tz": 0, "lat": 33.9535, "lon": -118.3392}], "idealCity": "Alameda, CA", "idealLat": 37.7652, "idealLon": -122.2416, "idealKm": 1879, "idealSaving": 1740, "idealOptimal": false, "idealFacility": "Oakland Roots Training Facility", "idealTier": "Pro", "matchDates": ["2026-06-13", "2026-06-19", "2026-06-25"], "gap1": 6, "gap2": 6, "minGap": 6, "span": 12, "crunchKm": 1323, "crunchGap": 6, "crunchPerDay": 220, "crunchRank": 32, "spread": 3577, "maxHop": 1749, "spreadRank": 20, "repeatVenue": null, "venueCat": "none"}, {"code": "QAT", "t": "Qatar", "g": "B", "b": "Santa Barbara, CA", "blat": 34.414, "blon": -119.8489, "km": 3538, "f": 6.7, "tz": 0, "actual": 3538, "floor": 1639, "pen": 1899, "venues": [{"v": "SF Bay Area", "n": 1, "km": 383, "tz": 0, "lat": 37.403, "lon": -121.97}, {"v": "Vancouver", "n": 1, "km": 1674, "tz": 0, "lat": 49.2768, "lon": -123.112}, {"v": "Seattle", "n": 1, "km": 1480, "tz": 0, "lat": 47.5952, "lon": -122.3316}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 1516, "idealSaving": 2022, "idealOptimal": false, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-13", "2026-06-18", "2026-06-24"], "gap1": 5, "gap2": 6, "minGap": 5, "span": 11, "crunchKm": 1323, "crunchGap": 5, "crunchPerDay": 265, "crunchRank": 29, "spread": 2653, "maxHop": 1323, "spreadRank": 32, "repeatVenue": null, "venueCat": "none"}, {"code": "URU", "t": "Uruguay", "g": "H", "b": "Playa del Carmen, QR", "blat": 20.6296, "blon": -87.0739, "km": 3535, "f": 6.7, "tz": 1, "actual": 3535, "floor": 3248, "pen": 287, "venues": [{"v": "Miami", "n": 2, "km": 915, "tz": 1, "lat": 25.958, "lon": -80.2389}, {"v": "Guadalajara", "n": 1, "km": 1704, "tz": 1, "lat": 20.6817, "lon": -103.4628}], "idealCity": "Coral Gables, FL", "idealLat": 25.7215, "idealLon": -80.2793, "idealKm": 2484, "idealSaving": 1051, "idealOptimal": false, "idealFacility": "University of Miami", "idealTier": "NCAA", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2439, "crunchGap": 5, "crunchPerDay": 488, "crunchRank": 5, "spread": 4878, "maxHop": 2439, "spreadRank": 8, "repeatVenue": "Miami", "venueCat": "b2b"}, {"code": "CAN", "t": "Canada", "g": "B", "b": "Vancouver, BC", "blat": 49.2827, "blon": -123.1207, "km": 3359, "f": 6.4, "tz": 3, "actual": 3359, "floor": 4464, "pen": -1105, "venues": [{"v": "Toronto", "n": 1, "km": 3357, "tz": 3, "lat": 43.6332, "lon": -79.4185}, {"v": "Vancouver", "n": 2, "km": 1, "tz": 0, "lat": 49.2768, "lon": -123.112}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 3397, "idealSaving": -38, "idealOptimal": true, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-12", "2026-06-18", "2026-06-24"], "gap1": 6, "gap2": 6, "minGap": 6, "span": 12, "crunchKm": 3357, "crunchGap": 6, "crunchPerDay": 560, "crunchRank": 4, "spread": 6714, "maxHop": 3357, "spreadRank": 2, "repeatVenue": "Vancouver", "venueCat": "b2b"}, {"code": "UZB", "t": "Uzbekistan", "g": "K", "b": "Marietta, GA", "blat": 33.9526, "blon": -84.5499, "km": 3332, "f": 6.4, "tz": 2, "actual": 3332, "floor": 2492, "pen": 840, "venues": [{"v": "Mexico City", "n": 1, "km": 2177, "tz": 2, "lat": 19.3029, "lon": -99.1505}, {"v": "Houston", "n": 1, "km": 1130, "tz": 1, "lat": 29.6847, "lon": -95.4107}, {"v": "Atlanta", "n": 1, "km": 26, "tz": 0, "lat": 33.7554, "lon": -84.4008}], "idealCity": "College Station, TX", "idealLat": 30.6188, "idealLon": -96.3365, "idealKm": 2602, "idealSaving": 730, "idealOptimal": false, "idealFacility": "Texas A&M University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 1135, "crunchGap": 4, "crunchPerDay": 284, "crunchRank": 27, "spread": 4520, "maxHop": 2171, "spreadRank": 16, "repeatVenue": null, "venueCat": "none"}, {"code": "KSA", "t": "Saudi Arabia", "g": "H", "b": "Austin, TX", "blat": 30.2672, "blon": -97.7431, "km": 3329, "f": 6.4, "tz": 1, "actual": 3329, "floor": 2088, "pen": 1241, "venues": [{"v": "Miami", "n": 1, "km": 1780, "tz": 1, "lat": 25.958, "lon": -80.2389}, {"v": "Atlanta", "n": 1, "km": 1315, "tz": 1, "lat": 33.7554, "lon": -84.4008}, {"v": "Houston", "n": 1, "km": 234, "tz": 0, "lat": 29.6847, "lon": -95.4107}], "idealCity": "Auburn, AL", "idealLat": 32.601, "idealLon": -85.4874, "idealKm": 2058, "idealSaving": 1271, "idealOptimal": false, "idealFacility": "Auburn University", "idealTier": "NCAA", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1135, "crunchGap": 5, "crunchPerDay": 227, "crunchRank": 30, "spread": 3637, "maxHop": 1547, "spreadRank": 18, "repeatVenue": null, "venueCat": "none"}, {"code": "SCO", "t": "Scotland", "g": "C", "b": "Charlotte, NC", "blat": 35.2271, "blon": -80.8431, "km": 3287, "f": 6.4, "tz": 0, "actual": 3287, "floor": 2628, "pen": 660, "venues": [{"v": "Boston", "n": 2, "km": 1127, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "Miami", "n": 1, "km": 1032, "tz": 0, "lat": 25.958, "lon": -80.2389}], "idealCity": "Pawtucket, RI", "idealLat": 41.8787, "idealLon": -71.3826, "idealKm": 1998, "idealSaving": 1289, "idealOptimal": false, "idealFacility": "Rhode Island FC", "idealTier": "USL", "matchDates": ["2026-06-13", "2026-06-19", "2026-06-24"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1973, "crunchGap": 5, "crunchPerDay": 395, "crunchRank": 10, "spread": 3945, "maxHop": 1973, "spreadRank": 17, "repeatVenue": "Boston", "venueCat": "b2b"}, {"code": "GER", "t": "Germany", "g": "E", "b": "Winston-Salem, NC", "blat": 36.0999, "blon": -80.2442, "km": 3174, "f": 6.2, "tz": 1, "actual": 3174, "floor": 2991, "pen": 183, "venues": [{"v": "Houston", "n": 1, "km": 1583, "tz": 1, "lat": 29.6847, "lon": -95.4107}, {"v": "Toronto", "n": 1, "km": 841, "tz": 0, "lat": 43.6332, "lon": -79.4185}, {"v": "New York NJ", "n": 1, "km": 750, "tz": 0, "lat": 40.8136, "lon": -74.0744}], "idealCity": "University Park, PA", "idealLat": 40.7982, "idealLon": -77.8599, "idealKm": 2669, "idealSaving": 505, "idealOptimal": false, "idealFacility": "Penn State University", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2100, "crunchGap": 6, "crunchPerDay": 350, "crunchRank": 14, "spread": 4929, "maxHop": 2289, "spreadRank": 7, "repeatVenue": null, "venueCat": "none"}, {"code": "POR", "t": "Portugal", "g": "K", "b": "Palm Beach Gardens, FL", "blat": 26.8234, "blon": -80.1387, "km": 3153, "f": 6.2, "tz": 1, "actual": 3153, "floor": 2062, "pen": 1091, "venues": [{"v": "Houston", "n": 2, "km": 1528, "tz": 1, "lat": 29.6847, "lon": -95.4107}, {"v": "Miami", "n": 1, "km": 97, "tz": 0, "lat": 25.958, "lon": -80.2389}], "idealCity": "College Station, TX", "idealLat": 30.6188, "idealLon": -96.3365, "idealKm": 1931, "idealSaving": 1222, "idealOptimal": false, "idealFacility": "Texas A&M University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 1547, "crunchGap": 4, "crunchPerDay": 387, "crunchRank": 11, "spread": 3094, "maxHop": 1547, "spreadRank": 29, "repeatVenue": "Houston", "venueCat": "b2b"}, {"code": "COL", "t": "Colombia", "g": "K", "b": "Zapopan, JAL", "blat": 20.7214, "blon": -103.3918, "km": 2910, "f": 5.9, "tz": 2, "actual": 2910, "floor": 3032, "pen": -122, "venues": [{"v": "Mexico City", "n": 1, "km": 470, "tz": 0, "lat": 19.3029, "lon": -99.1505}, {"v": "Guadalajara", "n": 1, "km": 9, "tz": 0, "lat": 20.6817, "lon": -103.4628}, {"v": "Miami", "n": 1, "km": 2431, "tz": 2, "lat": 25.958, "lon": -80.2389}], "idealCity": "Pachuca, HGO", "idealLat": 20.1011, "idealLon": -98.7591, "idealKm": 2594, "idealSaving": 316, "idealOptimal": false, "idealFacility": "Pachuca / Estadio Hidalgo", "idealTier": "LigaMX", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 2439, "crunchGap": 4, "crunchPerDay": 610, "crunchRank": 1, "spread": 4990, "maxHop": 2439, "spreadRank": 6, "repeatVenue": null, "venueCat": "none"}, {"code": "RSA", "t": "South Africa", "g": "A", "b": "San Agustin Tlaxiaca, HGO", "blat": 20.1167, "blon": -98.8833, "km": 2811, "f": 5.8, "tz": 2, "actual": 2811, "floor": 2737, "pen": 75, "venues": [{"v": "Mexico City", "n": 1, "km": 95, "tz": 0, "lat": 19.3029, "lon": -99.1505}, {"v": "Atlanta", "n": 1, "km": 2084, "tz": 2, "lat": 33.7554, "lon": -84.4008}, {"v": "Monterrey", "n": 1, "km": 633, "tz": 0, "lat": 25.6694, "lon": -100.2444}], "idealCity": "Pachuca, HGO", "idealLat": 20.1011, "idealLon": -98.7591, "idealKm": 2812, "idealSaving": -1, "idealOptimal": true, "idealFacility": "Pachuca / Estadio Hidalgo", "idealTier": "LigaMX", "matchDates": ["2026-06-11", "2026-06-18", "2026-06-24"], "gap1": 7, "gap2": 6, "minGap": 6, "span": 13, "crunchKm": 2171, "crunchGap": 7, "crunchPerDay": 310, "crunchRank": 22, "spread": 4659, "maxHop": 2171, "spreadRank": 13, "repeatVenue": null, "venueCat": "none"}, {"code": "SUI", "t": "Switzerland", "g": "B", "b": "San Diego, CA", "blat": 32.7157, "blon": -117.1611, "km": 2763, "f": 5.7, "tz": 0, "actual": 2763, "floor": 2081, "pen": 682, "venues": [{"v": "SF Bay Area", "n": 1, "km": 680, "tz": 0, "lat": 37.403, "lon": -121.97}, {"v": "Los Angeles", "n": 1, "km": 176, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "Vancouver", "n": 1, "km": 1907, "tz": 0, "lat": 49.2768, "lon": -123.112}], "idealCity": "Alameda, CA", "idealLat": 37.7652, "idealLon": -122.2416, "idealKm": 1879, "idealSaving": 884, "idealOptimal": false, "idealFacility": "Oakland Roots Training Facility", "idealTier": "Pro", "matchDates": ["2026-06-13", "2026-06-18", "2026-06-24"], "gap1": 5, "gap2": 6, "minGap": 5, "span": 11, "crunchKm": 1749, "crunchGap": 6, "crunchPerDay": 292, "crunchRank": 26, "spread": 3577, "maxHop": 1749, "spreadRank": 21, "repeatVenue": null, "venueCat": "none"}, {"code": "ESP", "t": "Spain", "g": "H", "b": "Chattanooga, TN", "blat": 35.0456, "blon": -85.3097, "km": 2719, "f": 5.6, "tz": 2, "actual": 2719, "floor": 3160, "pen": -441, "venues": [{"v": "Atlanta", "n": 2, "km": 166, "tz": 0, "lat": 33.7554, "lon": -84.4008}, {"v": "Guadalajara", "n": 1, "km": 2387, "tz": 2, "lat": 20.6817, "lon": -103.4628}], "idealCity": "Auburn, AL", "idealLat": 32.601, "idealLon": -85.4874, "idealKm": 2546, "idealSaving": 173, "idealOptimal": false, "idealFacility": "Auburn University", "idealTier": "NCAA", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2373, "crunchGap": 5, "crunchPerDay": 475, "crunchRank": 7, "spread": 4746, "maxHop": 2373, "spreadRank": 12, "repeatVenue": "Atlanta", "venueCat": "b2b"}, {"code": "NOR", "t": "Norway", "g": "I", "b": "Greensboro, NC", "blat": 36.0726, "blon": -79.792, "km": 2713, "f": 5.6, "tz": 0, "actual": 2713, "floor": 365, "pen": 2347, "venues": [{"v": "Boston", "n": 2, "km": 994, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "New York NJ", "n": 1, "km": 725, "tz": 0, "lat": 40.8136, "lon": -74.0744}], "idealCity": "Smithfield, RI", "idealLat": 41.9216, "idealLon": -71.5453, "idealKm": 304, "idealSaving": 2409, "idealOptimal": false, "idealFacility": "Bryant University", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-26"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 274, "crunchGap": 4, "crunchPerDay": 68, "crunchRank": 47, "spread": 548, "maxHop": 274, "spreadRank": 47, "repeatVenue": "Boston", "venueCat": "nonconsec"}, {"code": "CRO", "t": "Croatia", "g": "L", "b": "Alexandria, VA", "blat": 38.8048, "blon": -77.0469, "km": 2700, "f": 5.6, "tz": 1, "actual": 2700, "floor": 2787, "pen": -87, "venues": [{"v": "Dallas", "n": 1, "km": 1925, "tz": 1, "lat": 32.7473, "lon": -97.0945}, {"v": "Toronto", "n": 1, "km": 572, "tz": 0, "lat": 43.6332, "lon": -79.4185}, {"v": "Philadelphia", "n": 1, "km": 202, "tz": 0, "lat": 39.9008, "lon": -75.1675}], "idealCity": "University Park, PA", "idealLat": 40.7982, "idealLon": -77.8599, "idealKm": 2516, "idealSaving": 184, "idealOptimal": false, "idealFacility": "Penn State University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 1955, "crunchGap": 6, "crunchPerDay": 326, "crunchRank": 18, "spread": 4612, "maxHop": 2112, "spreadRank": 15, "repeatVenue": null, "venueCat": "none"}, {"code": "ALG", "t": "Algeria", "g": "J", "b": "Lawrence, KS", "blat": 38.9717, "blon": -95.2353, "km": 2466, "f": 5.3, "tz": 2, "actual": 2466, "floor": 3194, "pen": -728, "venues": [{"v": "Kansas City", "n": 2, "km": 65, "tz": 0, "lat": 39.0489, "lon": -94.4839}, {"v": "SF Bay Area", "n": 1, "km": 2335, "tz": 2, "lat": 37.403, "lon": -121.97}], "idealCity": "Kansas City, KS", "idealLat": 39.1218, "idealLon": -94.8237, "idealKm": 2430, "idealSaving": 36, "idealOptimal": true, "idealFacility": "Sporting Park (Sporting KC)", "idealTier": "MLS", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-27"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 2399, "crunchGap": 5, "crunchPerDay": 480, "crunchRank": 6, "spread": 4798, "maxHop": 2399, "spreadRank": 10, "repeatVenue": "Kansas City", "venueCat": "nonconsec"}, {"code": "COD", "t": "Congo DR", "g": "K", "b": "Houston, TX", "blat": 29.7604, "blon": -95.3698, "km": 2433, "f": 5.3, "tz": 1, "actual": 2433, "floor": 2547, "pen": -115, "venues": [{"v": "Houston", "n": 1, "km": 9, "tz": 0, "lat": 29.6847, "lon": -95.4107}, {"v": "Guadalajara", "n": 1, "km": 1296, "tz": 1, "lat": 20.6817, "lon": -103.4628}, {"v": "Atlanta", "n": 1, "km": 1127, "tz": 1, "lat": 33.7554, "lon": -84.4008}], "idealCity": "College Station, TX", "idealLat": 30.6188, "idealLon": -96.3365, "idealKm": 2627, "idealSaving": -194, "idealOptimal": true, "idealFacility": "Texas A&M University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 2373, "crunchGap": 4, "crunchPerDay": 593, "crunchRank": 2, "spread": 4795, "maxHop": 2373, "spreadRank": 11, "repeatVenue": null, "venueCat": "none"}, {"code": "AUS", "t": "Australia", "g": "D", "b": "Alameda, CA", "blat": 37.7652, "blon": -122.2416, "km": 2422, "f": 5.3, "tz": 0, "actual": 2422, "floor": 1639, "pen": 783, "venues": [{"v": "Vancouver", "n": 1, "km": 1282, "tz": 0, "lat": 49.2768, "lon": -123.112}, {"v": "Seattle", "n": 1, "km": 1093, "tz": 0, "lat": 47.5952, "lon": -122.3316}, {"v": "SF Bay Area", "n": 1, "km": 47, "tz": 0, "lat": 37.403, "lon": -121.97}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 1516, "idealSaving": 906, "idealOptimal": false, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-13", "2026-06-20", "2026-06-25"], "gap1": 7, "gap2": 5, "minGap": 5, "span": 12, "crunchKm": 1134, "crunchGap": 5, "crunchPerDay": 227, "crunchRank": 31, "spread": 2653, "maxHop": 1323, "spreadRank": 33, "repeatVenue": null, "venueCat": "none"}, {"code": "ECU", "t": "Ecuador", "g": "E", "b": "Columbus, OH", "blat": 39.9612, "blon": -82.9988, "km": 2419, "f": 5.3, "tz": 1, "actual": 2419, "floor": 2272, "pen": 147, "venues": [{"v": "Philadelphia", "n": 1, "km": 668, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Kansas City", "n": 1, "km": 990, "tz": 1, "lat": 39.0489, "lon": -94.4839}, {"v": "New York NJ", "n": 1, "km": 761, "tz": 0, "lat": 40.8136, "lon": -74.0744}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 1852, "idealSaving": 567, "idealOptimal": false, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1747, "crunchGap": 5, "crunchPerDay": 349, "crunchRank": 16, "spread": 3542, "maxHop": 1747, "spreadRank": 22, "repeatVenue": null, "venueCat": "none"}, {"code": "CPV", "t": "Cabo Verde", "g": "H", "b": "Tampa, FL", "blat": 27.9506, "blon": -82.4572, "km": 2260, "f": 5.1, "tz": 1, "actual": 2260, "floor": 2088, "pen": 171, "venues": [{"v": "Atlanta", "n": 1, "km": 672, "tz": 0, "lat": 33.7554, "lon": -84.4008}, {"v": "Miami", "n": 1, "km": 312, "tz": 0, "lat": 25.958, "lon": -80.2389}, {"v": "Houston", "n": 1, "km": 1276, "tz": 1, "lat": 29.6847, "lon": -95.4107}], "idealCity": "Auburn, AL", "idealLat": 32.601, "idealLon": -85.4874, "idealKm": 2058, "idealSaving": 202, "idealOptimal": false, "idealFacility": "Auburn University", "idealTier": "NCAA", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1547, "crunchGap": 5, "crunchPerDay": 309, "crunchRank": 23, "spread": 3637, "maxHop": 1547, "spreadRank": 19, "repeatVenue": null, "venueCat": "none"}, {"code": "IRN", "t": "IR Iran", "g": "G", "b": "Tijuana, BC", "blat": 32.5149, "blon": -117.0382, "km": 2136, "f": 4.9, "tz": 0, "actual": 2136, "floor": 2070, "pen": 67, "venues": [{"v": "Los Angeles", "n": 2, "km": 201, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "Seattle", "n": 1, "km": 1735, "tz": 0, "lat": 47.5952, "lon": -122.3316}], "idealCity": "Irvine, CA", "idealLat": 33.6846, "idealLon": -117.8265, "idealKm": 1704, "idealSaving": 432, "idealOptimal": false, "idealFacility": "Orange County SC", "idealTier": "USL", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1553, "crunchGap": 5, "crunchPerDay": 311, "crunchRank": 20, "spread": 3106, "maxHop": 1553, "spreadRank": 27, "repeatVenue": "Los Angeles", "venueCat": "b2b"}, {"code": "IRQ", "t": "Iraq", "g": "I", "b": "White Sulphur Springs, WV", "blat": 37.799, "blon": -80.2973, "km": 2060, "f": 4.8, "tz": 0, "actual": 2060, "floor": 944, "pen": 1116, "venues": [{"v": "Boston", "n": 1, "km": 905, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "Philadelphia", "n": 1, "km": 502, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Toronto", "n": 1, "km": 653, "tz": 0, "lat": 43.6332, "lon": -79.4185}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 946, "idealSaving": 1114, "idealOptimal": false, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-26"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 544, "crunchGap": 4, "crunchPerDay": 136, "crunchRank": 36, "spread": 1639, "maxHop": 686, "spreadRank": 37, "repeatVenue": null, "venueCat": "none"}, {"code": "BRA", "t": "Brazil", "g": "C", "b": "Morristown, NJ", "blat": 40.7968, "blon": -74.4815, "km": 1883, "f": 4.6, "tz": 0, "actual": 1883, "floor": 2244, "pen": -361, "venues": [{"v": "New York NJ", "n": 1, "km": 34, "tz": 0, "lat": 40.8136, "lon": -74.0744}, {"v": "Philadelphia", "n": 1, "km": 115, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Miami", "n": 1, "km": 1733, "tz": 0, "lat": 25.958, "lon": -80.2389}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 1843, "idealSaving": 40, "idealOptimal": true, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-13", "2026-06-18", "2026-06-24"], "gap1": 5, "gap2": 6, "minGap": 5, "span": 11, "crunchKm": 1620, "crunchGap": 6, "crunchPerDay": 270, "crunchRank": 28, "spread": 3505, "maxHop": 1747, "spreadRank": 23, "repeatVenue": null, "venueCat": "none"}, {"code": "NED", "t": "Netherlands", "g": "F", "b": "Riverside, MO", "blat": 39.1717, "blon": -94.6097, "km": 1823, "f": 4.5, "tz": 0, "actual": 1823, "floor": 1230, "pen": 594, "venues": [{"v": "Dallas", "n": 1, "km": 748, "tz": 0, "lat": 32.7473, "lon": -97.0945}, {"v": "Houston", "n": 1, "km": 1057, "tz": 0, "lat": 29.6847, "lon": -95.4107}, {"v": "Kansas City", "n": 1, "km": 17, "tz": 0, "lat": 39.0489, "lon": -94.4839}], "idealCity": "Dallas, TX", "idealLat": 32.8412, "idealLon": -96.7845, "idealKm": 1126, "idealSaving": 697, "idealOptimal": false, "idealFacility": "SMU", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1045, "crunchGap": 5, "crunchPerDay": 209, "crunchRank": 33, "spread": 2160, "maxHop": 1045, "spreadRank": 34, "repeatVenue": null, "venueCat": "none"}, {"code": "BEL", "t": "Belgium", "g": "G", "b": "Renton, WA", "blat": 47.4829, "blon": -122.2171, "km": 1764, "f": 4.5, "tz": 0, "actual": 1764, "floor": 2200, "pen": -436, "venues": [{"v": "Seattle", "n": 1, "km": 15, "tz": 0, "lat": 47.5952, "lon": -122.3316}, {"v": "Los Angeles", "n": 1, "km": 1539, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "Vancouver", "n": 1, "km": 210, "tz": 0, "lat": 49.2768, "lon": -123.112}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 1936, "idealSaving": -172, "idealOptimal": true, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1749, "crunchGap": 5, "crunchPerDay": 350, "crunchRank": 15, "spread": 3497, "maxHop": 1749, "spreadRank": 25, "repeatVenue": null, "venueCat": "none"}, {"code": "USA", "t": "USA", "g": "D", "b": "Irvine, CA", "blat": 33.6846, "blon": -117.8265, "km": 1704, "f": 4.4, "tz": 0, "actual": 1704, "floor": 2070, "pen": -366, "venues": [{"v": "Los Angeles", "n": 2, "km": 56, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "Seattle", "n": 1, "km": 1592, "tz": 0, "lat": 47.5952, "lon": -122.3316}], "idealCity": "Irvine, CA", "idealLat": 33.6846, "idealLon": -117.8265, "idealKm": 1704, "idealSaving": 0, "idealOptimal": true, "idealFacility": "Orange County SC", "idealTier": "USL", "matchDates": ["2026-06-12", "2026-06-20", "2026-06-25"], "gap1": 8, "gap2": 5, "minGap": 5, "span": 13, "crunchKm": 1553, "crunchGap": 5, "crunchPerDay": 311, "crunchRank": 21, "spread": 3106, "maxHop": 1553, "spreadRank": 28, "repeatVenue": "Los Angeles", "venueCat": "nonconsec"}, {"code": "TUN", "t": "Tunisia", "g": "F", "b": "Santiago, NL", "blat": 25.4231, "blon": -100.1517, "km": 1663, "f": 4.3, "tz": 1, "actual": 1663, "floor": 2108, "pen": -445, "venues": [{"v": "Monterrey", "n": 2, "km": 29, "tz": 0, "lat": 25.6694, "lon": -100.2444}, {"v": "Kansas City", "n": 1, "km": 1605, "tz": 1, "lat": 39.0489, "lon": -94.4839}], "idealCity": "San Antonio, TX", "idealLat": 29.4241, "idealLon": -98.4936, "idealKm": 2035, "idealSaving": -372, "idealOptimal": true, "idealFacility": "San Antonio FC", "idealTier": "USL", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1582, "crunchGap": 5, "crunchPerDay": 316, "crunchRank": 19, "spread": 3164, "maxHop": 1582, "spreadRank": 26, "repeatVenue": "Monterrey", "venueCat": "b2b"}, {"code": "HAI", "t": "Haiti", "g": "C", "b": "Galloway Twp, NJ", "blat": 39.4901, "blon": -74.4846, "km": 1560, "f": 4.2, "tz": 0, "actual": 1560, "floor": 1695, "pen": -135, "venues": [{"v": "Boston", "n": 1, "km": 396, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "Philadelphia", "n": 1, "km": 74, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Atlanta", "n": 1, "km": 1090, "tz": 0, "lat": 33.7554, "lon": -84.4008}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 1568, "idealSaving": -8, "idealOptimal": true, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-13", "2026-06-18", "2026-06-24"], "gap1": 5, "gap2": 6, "minGap": 5, "span": 11, "crunchKm": 1068, "crunchGap": 6, "crunchPerDay": 178, "crunchRank": 34, "spread": 2952, "maxHop": 1476, "spreadRank": 31, "repeatVenue": null, "venueCat": "none"}, {"code": "MAR", "t": "Morocco", "g": "C", "b": "Basking Ridge, NJ", "blat": 40.7062, "blon": -74.5496, "km": 1520, "f": 4.2, "tz": 0, "actual": 1520, "floor": 1785, "pen": -265, "venues": [{"v": "New York NJ", "n": 1, "km": 42, "tz": 0, "lat": 40.8136, "lon": -74.0744}, {"v": "Boston", "n": 1, "km": 314, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "Atlanta", "n": 1, "km": 1164, "tz": 0, "lat": 33.7554, "lon": -84.4008}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 1522, "idealSaving": -2, "idealOptimal": true, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-13", "2026-06-19", "2026-06-24"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 1476, "crunchGap": 5, "crunchPerDay": 295, "crunchRank": 24, "spread": 2953, "maxHop": 1476, "spreadRank": 30, "repeatVenue": null, "venueCat": "none"}, {"code": "ARG", "t": "Argentina", "g": "J", "b": "Kansas City, KS", "blat": 39.1142, "blon": -94.6275, "km": 1498, "f": 4.1, "tz": 0, "actual": 1498, "floor": 985, "pen": 513, "venues": [{"v": "Kansas City", "n": 1, "km": 14, "tz": 0, "lat": 39.0489, "lon": -94.4839}, {"v": "Dallas", "n": 2, "km": 742, "tz": 0, "lat": 32.7473, "lon": -97.0945}], "idealCity": "Dallas, TX", "idealLat": 32.8412, "idealLon": -96.7845, "idealKm": 782, "idealSaving": 716, "idealOptimal": false, "idealFacility": "SMU", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-27"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 739, "crunchGap": 6, "crunchPerDay": 123, "crunchRank": 39, "spread": 1478, "maxHop": 739, "spreadRank": 39, "repeatVenue": "Dallas", "venueCat": "b2b"}, {"code": "SWE", "t": "Sweden", "g": "F", "b": "Frisco, TX", "blat": 33.1507, "blon": -96.8236, "km": 1355, "f": 3.9, "tz": 1, "actual": 1355, "floor": 1081, "pen": 274, "venues": [{"v": "Monterrey", "n": 1, "km": 895, "tz": 1, "lat": 25.6694, "lon": -100.2444}, {"v": "Houston", "n": 1, "km": 408, "tz": 0, "lat": 29.6847, "lon": -95.4107}, {"v": "Dallas", "n": 1, "km": 51, "tz": 0, "lat": 32.7473, "lon": -97.0945}], "idealCity": "College Station, TX", "idealLat": 30.6188, "idealLon": -96.3365, "idealKm": 1055, "idealSaving": 300, "idealOptimal": false, "idealFacility": "Texas A&M University", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 652, "crunchGap": 6, "crunchPerDay": 109, "crunchRank": 41, "spread": 1873, "maxHop": 844, "spreadRank": 35, "repeatVenue": null, "venueCat": "none"}, {"code": "EGY", "t": "Egypt", "g": "G", "b": "Spokane, WA", "blat": 47.6588, "blon": -117.426, "km": 1191, "f": 3.7, "tz": 0, "actual": 1191, "floor": 261, "pen": 930, "venues": [{"v": "Seattle", "n": 2, "km": 368, "tz": 0, "lat": 47.5952, "lon": -122.3316}, {"v": "Vancouver", "n": 1, "km": 456, "tz": 0, "lat": 49.2768, "lon": -123.112}], "idealCity": "Langley, BC", "idealLat": 49.144, "idealLon": -122.6656, "idealKm": 384, "idealSaving": 807, "idealOptimal": false, "idealFacility": "Willoughby Community Park (Vancouver FC)", "idealTier": "CPL", "matchDates": ["2026-06-15", "2026-06-21", "2026-06-26"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 196, "crunchGap": 5, "crunchPerDay": 39, "crunchRank": 48, "spread": 391, "maxHop": 196, "spreadRank": 48, "repeatVenue": "Seattle", "venueCat": "nonconsec"}, {"code": "GHA", "t": "Ghana", "g": "L", "b": "Smithfield, RI", "blat": 41.9215, "blon": -71.5495, "km": 1078, "f": 3.6, "tz": 0, "actual": 1078, "floor": 944, "pen": 133, "venues": [{"v": "Toronto", "n": 1, "km": 670, "tz": 0, "lat": 43.6332, "lon": -79.4185}, {"v": "Boston", "n": 1, "km": 30, "tz": 0, "lat": 42.0909, "lon": -71.2643}, {"v": "Philadelphia", "n": 1, "km": 378, "tz": 0, "lat": 39.9008, "lon": -75.1675}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 946, "idealSaving": 132, "idealOptimal": false, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 686, "crunchGap": 6, "crunchPerDay": 114, "crunchRank": 40, "spread": 1639, "maxHop": 686, "spreadRank": 38, "repeatVenue": null, "venueCat": "none"}, {"code": "FRA", "t": "France", "g": "I", "b": "Waltham, MA", "blat": 42.3765, "blon": -71.2356, "km": 754, "f": 3.2, "tz": 0, "actual": 754, "floor": 457, "pen": 297, "venues": [{"v": "New York NJ", "n": 1, "km": 293, "tz": 0, "lat": 40.8136, "lon": -74.0744}, {"v": "Philadelphia", "n": 1, "km": 429, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Boston", "n": 1, "km": 32, "tz": 0, "lat": 42.0909, "lon": -71.2643}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 457, "idealSaving": 297, "idealOptimal": false, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-26"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 408, "crunchGap": 4, "crunchPerDay": 102, "crunchRank": 44, "spread": 819, "maxHop": 408, "spreadRank": 46, "repeatVenue": null, "venueCat": "none"}, {"code": "PAN", "t": "Panama", "g": "L", "b": "New Tecumseth, ON", "blat": 44.0833, "blon": -79.7833, "km": 709, "f": 3.1, "tz": 0, "actual": 709, "floor": 720, "pen": -11, "venues": [{"v": "Toronto", "n": 2, "km": 58, "tz": 0, "lat": 43.6332, "lon": -79.4185}, {"v": "New York NJ", "n": 1, "km": 593, "tz": 0, "lat": 40.8136, "lon": -74.0744}], "idealCity": "Syracuse, NY", "idealLat": 43.0392, "idealLon": -76.1351, "idealKm": 848, "idealSaving": -139, "idealOptimal": true, "idealFacility": "Syracuse University", "idealTier": "NCAA", "matchDates": ["2026-06-17", "2026-06-23", "2026-06-27"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 540, "crunchGap": 4, "crunchPerDay": 135, "crunchRank": 37, "spread": 1080, "maxHop": 540, "spreadRank": 42, "repeatVenue": "Toronto", "venueCat": "b2b"}, {"code": "KOR", "t": "Korea Republic", "g": "A", "b": "Zapopan, JAL", "blat": 20.7214, "blon": -103.3918, "km": 654, "f": 3.1, "tz": 0, "actual": 654, "floor": 860, "pen": -205, "venues": [{"v": "Guadalajara", "n": 2, "km": 9, "tz": 0, "lat": 20.6817, "lon": -103.4628}, {"v": "Monterrey", "n": 1, "km": 637, "tz": 0, "lat": 25.6694, "lon": -100.2444}], "idealCity": "Aguascalientes, AGS", "idealLat": 21.8853, "idealLon": -102.2916, "idealKm": 831, "idealSaving": -177, "idealOptimal": true, "idealFacility": "Necaxa / Estadio Victoria", "idealTier": "LigaMX", "matchDates": ["2026-06-11", "2026-06-18", "2026-06-24"], "gap1": 7, "gap2": 6, "minGap": 6, "span": 13, "crunchKm": 645, "crunchGap": 6, "crunchPerDay": 108, "crunchRank": 43, "spread": 1290, "maxHop": 645, "spreadRank": 40, "repeatVenue": "Guadalajara", "venueCat": "b2b"}, {"code": "SEN", "t": "Senegal", "g": "I", "b": "Piscataway, NJ", "blat": 40.5549, "blon": -74.4646, "km": 620, "f": 3.0, "tz": 0, "actual": 620, "floor": 720, "pen": -100, "venues": [{"v": "New York NJ", "n": 2, "km": 44, "tz": 0, "lat": 40.8136, "lon": -74.0744}, {"v": "Toronto", "n": 1, "km": 533, "tz": 0, "lat": 43.6332, "lon": -79.4185}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 628, "idealSaving": -8, "idealOptimal": true, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-16", "2026-06-22", "2026-06-26"], "gap1": 6, "gap2": 4, "minGap": 4, "span": 10, "crunchKm": 540, "crunchGap": 4, "crunchPerDay": 135, "crunchRank": 38, "spread": 1080, "maxHop": 540, "spreadRank": 43, "repeatVenue": "New York NJ", "venueCat": "b2b"}, {"code": "CIV", "t": "Côte d'Ivoire", "g": "E", "b": "Chester, PA", "blat": 39.8496, "blon": -75.3557, "km": 573, "f": 3.0, "tz": 0, "actual": 573, "floor": 726, "pen": -153, "venues": [{"v": "Philadelphia", "n": 2, "km": 17, "tz": 0, "lat": 39.9008, "lon": -75.1675}, {"v": "Toronto", "n": 1, "km": 539, "tz": 0, "lat": 43.6332, "lon": -79.4185}], "idealCity": "Piscataway, NJ", "idealLat": 40.5221, "idealLon": -74.4636, "idealKm": 718, "idealSaving": -145, "idealOptimal": true, "idealFacility": "Rutgers University", "idealTier": "NCAA", "matchDates": ["2026-06-14", "2026-06-20", "2026-06-25"], "gap1": 6, "gap2": 5, "minGap": 5, "span": 11, "crunchKm": 544, "crunchGap": 5, "crunchPerDay": 109, "crunchRank": 42, "spread": 1089, "maxHop": 544, "spreadRank": 41, "repeatVenue": "Philadelphia", "venueCat": "nonconsec"}, {"code": "PAR", "t": "Paraguay", "g": "D", "b": "San Jose, CA", "blat": 37.3382, "blon": -121.8863, "km": 515, "f": 2.9, "tz": 0, "actual": 515, "floor": 673, "pen": -158, "venues": [{"v": "Los Angeles", "n": 1, "km": 494, "tz": 0, "lat": 33.9535, "lon": -118.3392}, {"v": "SF Bay Area", "n": 2, "km": 10, "tz": 0, "lat": 37.403, "lon": -121.97}], "idealCity": "Seaside, CA", "idealLat": 36.6177, "idealLon": -121.8221, "idealKm": 610, "idealSaving": -95, "idealOptimal": true, "idealFacility": "Monterey Bay FC", "idealTier": "USL", "matchDates": ["2026-06-12", "2026-06-19", "2026-06-25"], "gap1": 7, "gap2": 6, "minGap": 6, "span": 13, "crunchKm": 505, "crunchGap": 7, "crunchPerDay": 72, "crunchRank": 46, "spread": 1009, "maxHop": 505, "spreadRank": 44, "repeatVenue": "SF Bay Area", "venueCat": "b2b"}, {"code": "MEX", "t": "Mexico", "g": "A", "b": "Mexico City", "blat": 19.4326, "blon": -99.1332, "km": 502, "f": 2.9, "tz": 0, "actual": 502, "floor": 635, "pen": -132, "venues": [{"v": "Mexico City", "n": 2, "km": 15, "tz": 0, "lat": 19.3029, "lon": -99.1505}, {"v": "Guadalajara", "n": 1, "km": 473, "tz": 0, "lat": 20.6817, "lon": -103.4628}], "idealCity": "Toluca, MEX", "idealLat": 19.2926, "idealLon": -99.6569, "idealKm": 533, "idealSaving": -31, "idealOptimal": true, "idealFacility": "Toluca / Nemesio Díez", "idealTier": "LigaMX", "matchDates": ["2026-06-11", "2026-06-18", "2026-06-24"], "gap1": 7, "gap2": 6, "minGap": 6, "span": 13, "crunchKm": 476, "crunchGap": 6, "crunchPerDay": 79, "crunchRank": 45, "spread": 952, "maxHop": 476, "spreadRank": 45, "repeatVenue": "Mexico City", "venueCat": "nonconsec"}], "venues": {"Vancouver": {"lat": 49.2768, "lon": -123.112}, "Seattle": {"lat": 47.5952, "lon": -122.3316}, "SF Bay Area": {"lat": 37.403, "lon": -121.97}, "Los Angeles": {"lat": 33.9535, "lon": -118.3392}, "Guadalajara": {"lat": 20.6817, "lon": -103.4628}, "Mexico City": {"lat": 19.3029, "lon": -99.1505}, "Monterrey": {"lat": 25.6694, "lon": -100.2444}, "Houston": {"lat": 29.6847, "lon": -95.4107}, "Dallas": {"lat": 32.7473, "lon": -97.0945}, "Kansas City": {"lat": 39.0489, "lon": -94.4839}, "Atlanta": {"lat": 33.7554, "lon": -84.4008}, "Miami": {"lat": 25.958, "lon": -80.2389}, "Toronto": {"lat": 43.6332, "lon": -79.4185}, "Boston": {"lat": 42.0909, "lon": -71.2643}, "Philadelphia": {"lat": 39.9008, "lon": -75.1675}, "New York NJ": {"lat": 40.8136, "lon": -74.0744}}, "groups": {"A": ["MEX", "RSA", "KOR", "CZE"], "B": ["CAN", "BIH", "QAT", "SUI"], "C": ["BRA", "MAR", "HAI", "SCO"], "D": ["USA", "PAR", "AUS", "TUR"], "E": ["GER", "CUW", "CIV", "ECU"], "F": ["NED", "JPN", "SWE", "TUN"], "G": ["BEL", "EGY", "IRN", "NZL"], "H": ["ESP", "CPV", "KSA", "URU"], "I": ["FRA", "SEN", "IRQ", "NOR"], "J": ["ARG", "ALG", "AUT", "JOR"], "K": ["POR", "COD", "UZB", "COL"], "L": ["ENG", "CRO", "GHA", "PAN"]}, "countryPaths": ["M882.0,135.9 L890.7,138.2 L901.8,137.7 L895.9,144.8 L891.5,146.0 L876.3,138.6 L873.3,132.8 L877.8,127.3 L882.0,135.9Z", "M904.3,90.2 L898.4,90.5 L882.9,84.8 L871.7,76.0 L875.9,74.5 L891.7,79.1 L903.9,86.8 L904.3,90.2Z", "M164.2,101.0 L158.1,103.6 L138.4,95.3 L134.8,88.8 L124.1,82.4 L121.9,77.1 L109.6,73.7 L105.0,63.5 L106.0,59.2 L118.6,63.3 L126.0,66.1 L137.2,68.1 L141.3,74.6 L147.2,83.4 L159.2,91.0 L164.2,101.0Z", "M972.3,60.7 L964.4,77.1 L972.2,70.8 L980.3,74.8 L976.1,81.3 L986.7,86.4 L992.2,81.9 L1004.2,87.6 L1000.5,100.9 L1008.9,97.8 L1010.4,107.4 L1014.1,118.5 L1009.1,134.0 L1003.7,134.7 L995.8,131.4 L998.4,116.9 L995.0,114.7 L981.1,130.0 L974.0,129.4 L982.4,121.1 L970.9,116.8 L958.0,117.9 L934.7,117.3 L932.9,112.0 L940.4,105.7 L935.2,100.8 L945.2,89.8 L957.6,60.1 L965.1,49.3 L975.5,42.7 L981.0,43.5 L978.7,48.7 L972.3,60.7Z", "M48.2,-7.8 L53.8,-5.2 L65.3,-6.8 L61.7,16.1 L72.2,32.0 L67.4,32.0 L60.2,23.0 L55.7,13.8 L49.7,7.6 L47.5,-1.3 L48.2,-7.8Z", "M827.2,121.7 L819.1,124.7 L815.1,120.1 L806.0,133.4 L802.3,146.9 L798.1,154.7 L793.0,157.3 L789.1,158.2 L787.9,162.4 L765.8,162.4 L747.6,162.5 L742.2,165.6 L729.5,177.7 L728.0,179.0 L724.2,185.5 L713.2,185.5 L701.4,185.6 L696.0,188.2 L697.9,191.4 L699.0,196.4 L698.8,198.1 L683.1,206.2 L670.7,208.8 L656.8,217.4 L653.8,217.4 L649.7,214.8 L648.4,212.5 L648.6,210.9 L651.3,205.2 L656.9,196.2 L660.4,186.5 L658.0,172.0 L655.4,156.6 L643.0,148.6 L644.4,145.5 L642.7,143.4 L639.4,143.4 L637.0,140.6 L636.4,136.5 L634.0,138.3 L630.8,137.8 L631.5,136.1 L628.7,134.3 L627.6,129.7 L618.2,124.1 L608.5,118.2 L596.8,111.3 L585.6,104.8 L574.8,109.9 L570.9,110.0 L556.1,105.4 L546.4,107.7 L534.8,102.1 L522.5,99.2 L514.2,98.1 L510.4,95.0 L508.3,85.0 L504.3,85.1 L504.2,92.1 L479.4,92.1 L438.4,92.1 L397.6,92.1 L361.6,92.1 L325.6,92.1 L290.2,92.1 L253.7,92.1 L241.9,92.1 L206.3,92.1 L172.2,92.1 L170.6,92.1 L147.4,73.9 L138.8,65.8 L117.1,58.0 L110.4,41.0 L112.1,29.1 L96.7,20.7 L94.6,4.6 L80.1,-10.2 L79.9,-20.9 L86.6,-31.0 L86.2,-44.4 L65.8,-58.1 L53.6,-83.3 L46.1,-99.6 L35.1,-110.0 L27.0,-119.5 L20.6,-131.8 L8.6,-124.1 L-3.1,-111.0 L-13.7,-126.4 L-22.1,-136.8 L-33.8,-143.5 L-45.6,-144.2 L-45.5,-296.0 L-45.5,-414.4 L-23.1,-406.1 L-4.2,-389.8 L8.3,-386.8 L18.8,-400.8 L33.4,-411.5 L51.2,-407.3 L69.1,-422.5 L88.8,-431.2 L97.0,-416.7 L106.0,-424.9 L108.6,-441.6 L116.9,-437.8 L137.2,-406.4 L153.2,-430.0 L154.8,-403.7 L169.5,-409.3 L174.1,-419.4 L188.6,-417.4 L206.9,-402.9 L235.0,-390.5 L251.5,-384.9 L263.3,-387.0 L279.5,-370.3 L262.6,-354.3 L284.3,-347.5 L316.6,-351.2 L326.9,-356.8 L339.6,-337.9 L352.7,-353.8 L340.4,-367.5 L348.2,-378.7 L362.8,-380.2 L372.4,-383.5 L382.1,-375.6 L394.1,-358.0 L407.5,-360.6 L428.7,-346.2 L447.3,-351.2 L464.8,-350.5 L463.4,-370.5 L474.1,-376.2 L492.7,-365.1 L492.6,-335.1 L500.3,-360.3 L509.9,-359.5 L515.3,-392.5 L502.5,-413.5 L488.5,-427.6 L489.4,-467.6 L503.6,-495.1 L519.4,-488.9 L531.6,-472.2 L547.9,-431.2 L537.2,-414.0 L559.5,-407.0 L559.5,-372.8 L575.5,-398.9 L589.9,-377.4 L586.3,-353.4 L597.9,-332.2 L610.4,-354.9 L619.2,-383.0 L619.8,-420.3 L636.9,-417.6 L654.6,-412.5 L670.7,-395.6 L671.4,-379.1 L662.5,-361.7 L670.9,-344.6 L669.4,-329.5 L645.9,-308.2 L629.2,-303.6 L616.8,-312.6 L613.3,-297.7 L601.7,-273.1 L598.2,-260.7 L584.3,-241.9 L567.1,-240.1 L557.7,-228.6 L556.9,-211.3 L542.9,-208.0 L528.2,-187.0 L515.2,-158.7 L510.6,-139.5 L509.9,-112.0 L527.5,-108.1 L532.9,-86.8 L538.5,-69.8 L555.3,-74.2 L577.6,-64.7 L589.6,-56.4 L598.2,-46.2 L613.2,-40.3 L625.9,-31.4 L645.7,-30.1 L658.8,-28.1 L656.8,-10.1 L660.6,10.3 L669.2,32.4 L687.1,50.8 L696.3,44.6 L702.8,24.5 L696.6,-7.2 L688.1,-18.1 L707.3,-27.9 L720.9,-42.7 L727.5,-57.7 L726.6,-72.4 L718.4,-91.4 L703.8,-108.7 L718.0,-133.3 L712.8,-155.2 L708.8,-194.5 L717.1,-200.5 L737.7,-193.5 L750.0,-191.0 L759.9,-197.8 L771.1,-189.0 L785.9,-174.3 L789.5,-164.6 L810.9,-162.7 L810.5,-142.2 L814.5,-112.2 L825.5,-108.6 L834.2,-95.1 L851.6,-107.8 L863.0,-133.7 L871.0,-144.9 L880.3,-123.6 L895.9,-94.0 L909.2,-67.2 L904.4,-53.5 L920.3,-41.4 L931.1,-29.3 L950.2,-23.9 L957.9,-17.2 L962.7,0.1 L972.0,2.8 L976.8,10.4 L977.7,32.7 L969.0,40.0 L960.4,46.8 L940.6,53.6 L925.5,69.1 L905.3,72.1 L879.6,68.2 L861.6,68.1 L849.2,69.4 L839.1,82.7 L823.9,90.9 L806.6,114.8 L792.7,131.1 L802.9,128.2 L822.2,104.8 L847.3,89.7 L865.3,87.9 L875.9,96.8 L864.6,109.0 L868.4,128.1 L872.3,141.3 L887.9,149.9 L907.7,147.4 L919.7,127.8 L920.6,140.5 L928.3,146.8 L913.5,158.0 L886.9,168.1 L875.0,174.9 L861.6,186.9 L852.5,185.7 L852.0,171.6 L872.9,157.6 L853.7,158.1 L840.3,160.2 L832.5,150.5 L832.5,126.8 L827.2,121.7Z", "M586.5,542.4 L584.2,542.5 L579.9,550.2 L577.7,548.7 L576.3,549.3 L576.4,551.1 L565.3,551.0 L554.1,551.0 L554.1,558.1 L548.7,558.1 L553.1,562.3 L557.6,565.2 L558.9,567.9 L560.8,568.7 L560.5,572.9 L545.1,573.0 L539.4,583.1 L541.1,585.4 L539.7,588.3 L539.4,592.0 L525.8,578.6 L519.6,574.5 L509.8,571.3 L503.1,572.2 L493.5,576.9 L487.4,578.1 L479.0,574.8 L470.0,572.4 L458.8,566.7 L449.8,565.0 L436.2,559.1 L426.2,553.1 L423.1,549.8 L416.4,549.0 L404.2,545.0 L399.2,539.2 L386.3,532.0 L380.3,524.0 L377.4,517.8 L381.4,516.5 L380.2,512.9 L382.9,509.5 L383.0,505.1 L378.9,499.3 L377.9,494.1 L373.8,487.6 L363.3,474.6 L351.2,464.3 L345.4,456.1 L335.1,450.7 L332.9,447.4 L334.7,439.2 L328.6,436.0 L321.5,429.5 L318.5,420.1 L312.1,419.0 L305.1,411.8 L299.5,405.1 L299.0,400.9 L292.5,390.4 L288.3,379.8 L288.4,374.4 L279.8,368.8 L275.8,369.5 L268.9,365.6 L267.0,371.3 L269.0,378.0 L270.1,388.5 L274.3,394.2 L283.2,403.7 L285.1,406.9 L287.0,407.9 L288.5,412.6 L290.7,412.4 L293.1,421.1 L296.7,424.6 L299.3,429.4 L306.8,436.2 L310.8,448.7 L314.4,454.5 L317.7,460.7 L318.3,467.6 L324.1,468.1 L328.9,474.0 L333.3,479.9 L333.0,482.2 L328.0,487.0 L325.8,486.9 L322.7,479.0 L314.8,471.5 L306.2,465.2 L300.0,461.8 L300.4,452.1 L298.6,444.9 L292.9,440.8 L284.6,434.8 L283.1,436.5 L280.0,433.0 L272.6,429.8 L265.6,421.9 L266.4,420.9 L271.4,421.7 L275.8,416.6 L276.3,410.5 L267.0,400.7 L260.0,396.9 L255.6,388.2 L251.1,379.1 L245.6,367.9 L240.7,355.1 L254.3,354.1 L269.6,352.5 L268.5,355.3 L286.6,362.2 L313.9,372.1 L337.8,372.0 L347.3,372.0 L347.3,366.2 L368.1,366.2 L372.5,371.2 L378.6,375.6 L385.7,381.8 L389.7,389.0 L392.7,396.6 L398.9,400.8 L408.8,404.9 L416.4,394.1 L426.2,393.8 L434.7,399.3 L440.7,408.7 L444.8,416.7 L451.9,424.4 L454.5,433.8 L457.9,440.1 L467.3,444.3 L475.8,447.2 L480.5,446.8 L475.8,458.5 L473.7,468.0 L472.8,485.5 L471.7,491.9 L473.8,498.9 L477.5,505.2 L479.9,515.2 L487.8,524.7 L490.6,532.0 L495.3,538.2 L508.1,541.6 L513.0,546.9 L523.5,543.3 L532.7,542.1 L541.7,539.8 L549.2,537.6 L556.8,532.4 L559.7,525.0 L560.7,514.3 L562.8,510.5 L570.9,507.2 L583.6,504.2 L594.2,504.6 L601.5,503.5 L604.3,506.3 L603.9,512.4 L597.5,520.1 L594.6,527.8 L596.8,530.0 L595.0,535.5 L592.0,545.4 L589.0,542.2 L586.5,542.4Z", "M172.2,92.1 L206.3,92.1 L241.9,92.1 L253.7,92.1 L290.2,92.1 L325.6,92.1 L361.6,92.1 L397.6,92.1 L438.4,92.1 L479.4,92.1 L504.2,92.1 L504.3,85.1 L508.3,85.0 L510.4,95.0 L514.2,98.1 L522.5,99.2 L534.8,102.1 L546.4,107.7 L556.1,105.4 L570.9,110.0 L574.8,109.9 L585.6,104.8 L596.8,111.3 L608.5,118.2 L618.2,124.1 L627.6,129.7 L628.7,134.3 L631.5,136.1 L630.8,137.8 L634.0,138.3 L636.4,136.5 L637.0,140.6 L639.4,143.4 L642.7,143.4 L644.4,145.5 L643.0,148.6 L655.4,156.6 L658.0,172.0 L660.4,186.5 L656.9,196.2 L651.3,205.2 L648.6,210.9 L648.4,212.5 L649.7,214.8 L653.8,217.4 L656.8,217.4 L670.7,208.8 L683.1,206.2 L698.8,198.1 L699.0,196.4 L697.9,191.4 L696.0,188.2 L701.4,185.6 L713.2,185.5 L724.2,185.5 L728.0,179.0 L729.5,177.7 L742.2,165.6 L747.6,162.5 L765.8,162.4 L787.9,162.4 L789.1,158.2 L793.0,157.3 L798.1,154.7 L802.3,146.9 L806.0,133.4 L815.1,120.1 L819.1,124.7 L827.2,121.7 L832.5,126.8 L832.5,150.5 L840.3,160.2 L842.4,165.7 L829.6,173.9 L817.3,179.7 L804.6,184.6 L798.3,194.4 L796.2,198.1 L796.1,206.7 L800.1,215.3 L805.0,215.7 L803.8,209.8 L807.4,213.4 L806.4,218.0 L798.3,220.6 L792.6,220.3 L783.7,223.1 L778.5,223.9 L771.5,224.6 L761.5,229.3 L779.1,226.3 L782.7,229.3 L765.9,234.0 L758.2,234.1 L758.6,232.1 L754.9,236.5 L758.5,237.2 L755.9,248.5 L747.1,260.4 L746.3,256.4 L743.6,255.6 L739.7,251.8 L742.2,260.1 L745.2,262.8 L745.3,268.6 L741.5,274.6 L734.7,286.7 L733.7,286.1 L737.4,275.8 L731.2,269.9 L729.8,257.2 L727.5,263.8 L730.1,273.5 L722.2,271.1 L730.4,276.1 L730.9,290.4 L734.4,291.5 L735.6,296.6 L737.3,311.5 L729.7,322.4 L717.3,326.7 L709.4,335.2 L703.4,336.1 L697.3,341.4 L695.6,346.3 L682.4,355.5 L675.7,362.3 L670.0,370.6 L668.2,380.6 L670.3,390.2 L674.3,402.0 L679.6,411.7 L679.7,417.6 L685.4,433.3 L685.0,442.3 L684.5,447.5 L681.5,455.6 L677.9,457.3 L672.0,455.7 L670.1,449.9 L665.5,446.8 L659.2,435.3 L653.6,425.0 L651.8,419.7 L654.3,410.7 L650.9,403.1 L641.6,391.6 L636.9,389.5 L624.8,395.8 L622.6,395.1 L616.8,388.6 L609.3,385.2 L595.7,386.9 L585.1,385.4 L575.9,386.3 L571.0,388.5 L573.1,392.2 L572.9,397.8 L575.5,400.5 L573.2,402.3 L568.7,400.3 L564.2,402.9 L555.5,402.5 L546.6,395.2 L536.1,396.9 L527.4,393.7 L519.9,394.7 L509.8,397.9 L498.9,408.1 L487.0,414.0 L480.5,420.5 L477.7,426.6 L477.6,435.9 L478.2,442.3 L480.5,446.8 L475.8,447.2 L467.3,444.3 L457.9,440.1 L454.5,433.8 L451.9,424.4 L444.8,416.7 L440.7,408.7 L434.7,399.3 L426.2,393.8 L416.4,394.1 L408.8,404.9 L398.9,400.8 L392.7,396.6 L389.7,389.0 L385.7,381.8 L378.6,375.6 L372.5,371.2 L368.1,366.2 L347.3,366.2 L347.3,372.0 L337.8,372.0 L313.9,372.1 L286.6,362.2 L268.5,355.3 L269.6,352.5 L254.3,354.1 L240.7,355.1 L238.7,347.9 L230.9,339.6 L225.3,337.9 L224.0,333.7 L217.3,333.0 L213.0,329.1 L201.8,327.7 L198.8,325.3 L197.3,317.3 L185.7,302.5 L175.7,281.6 L176.1,278.1 L170.8,273.1 L161.6,260.2 L159.9,247.6 L153.5,239.0 L156.1,225.9 L155.7,212.1 L151.9,199.7 L156.6,184.2 L158.0,169.0 L159.5,153.6 L157.3,130.4 L153.5,115.2 L150.0,106.9 L151.5,103.4 L168.8,109.5 L175.2,126.3 L178.2,121.6 L176.3,107.0 L172.2,92.1Z"], "venueCity": {"Vancouver": "Vancouver", "Seattle": "Seattle", "SF Bay Area": "Santa Clara", "Los Angeles": "Inglewood", "Guadalajara": "Guadalajara", "Mexico City": "Mexico City", "Monterrey": "Monterrey", "Houston": "Houston", "Dallas": "Arlington", "Kansas City": "Kansas City", "Atlanta": "Atlanta", "Miami": "Miami Gardens", "Toronto": "Toronto", "Boston": "Foxborough", "Philadelphia": "Philadelphia", "New York NJ": "East Rutherford"}, "facilityPool": 157};</script>
+<script>
+/* ============ SHARED ============ */
+const TEAMS=DATA.teams, VEN=DATA.venues, GRP=DATA.groups;
+const VC=DATA.venueCity||{};
+const vcity=n=>VC[n]||n;   // FIFA venue name -> real stadium city
+const byCode={}; TEAMS.forEach(t=>byCode[t.code]=t);
+const fmt=n=>Math.round(n).toLocaleString();
+const GCOLORS=['#ff3d3d','#ff6b35','#ffd23f','#3ddc84','#2ee6d6','#9d7cff'];
+
+/* ============ HERO STATS ============ */
+(function(){
+  const mean=Math.round(TEAMS.reduce((a,t)=>a+t.km,0)/TEAMS.length);
+  const far=TEAMS.reduce((a,t)=>t.km>a.km?t:a);
+  const near=TEAMS.reduce((a,t)=>t.km<a.km?t:a);
+  const worst=TEAMS.reduce((a,t)=>t.idealSaving>a.idealSaving?t:a);
+  const ratio=(far.km/near.km).toFixed(1);
+  document.getElementById('heroStats').innerHTML=`
+    <div class="s alt"><div class="n">${fmt(far.km)}</div><div class="l">Most · ${far.t}</div></div>
+    <div class="s alt2"><div class="n">${fmt(near.km)}</div><div class="l">Least · ${near.t}</div></div>
+    <div class="s"><div class="n">${ratio}×</div><div class="l">Gap between them</div></div>
+    <div class="s"><div class="n">${fmt(worst.idealSaving)}</div><div class="l">Avoidable km · ${worst.t}</div></div>`;
+})();
+
+/* ============ SHAREABLE TEAM CARD ============ */
+(function(){
+  const sel=document.getElementById('tcSel');
+  const card=document.getElementById('tcard');
+  const note=document.getElementById('tcNote');
+  // rank by total distance (1 = most travel)
+  const ranked=[...TEAMS].sort((a,b)=>b.km-a.km);
+  const rankOf={}; ranked.forEach((t,i)=>rankOf[t.code]=i+1);
+  // populate selector alphabetically
+  [...TEAMS].sort((a,b)=>a.t.localeCompare(b.t)).forEach(t=>{
+    const o=document.createElement('option'); o.value=t.code; o.textContent=t.t; sel.appendChild(o);
+  });
+  function summaryText(t){
+    const r=rankOf[t.code];
+    const base=t.b, fac=t.idealFacility, save=t.idealSaving;
+    let l3 = save>=100
+      ? `Could've saved ${fmt(save)} km by basing at ${fac} (${t.idealCity}).`
+      : `Smartly based — within ${fmt(Math.max(0,save))} km of the ideal facility.`;
+    return `${t.t} · World Cup 2026 travel\n`+
+      `${fmt(t.km)} km to their 3 group games (#${r} of 48 farthest)\n`+
+      `~${t.f} flight hours · ${t.tz} time zone${t.tz===1?'':'s'} crossed\n`+
+      `Tightest turnaround: ${fmt(t.crunchKm)} km on ${t.crunchGap} days' rest\n`+
+      `Base: ${base}\n${l3}\n— THE LONG HAUL`;
+  }
+  function render(code){
+    const t=byCode[code]; const r=rankOf[code];
+    const nailed = t.idealSaving<100;
+    card.innerHTML=`
+      <div class="tc-top">
+        <div><div class="tc-team">${t.t}</div><div class="tc-grp">Group ${t.g} · World Cup 2026</div></div>
+        <div class="tc-rank"><div class="rk">#${r}</div><div class="rl">of 48 farthest</div></div>
+      </div>
+      <div class="tc-hero">
+        <span class="big">${fmt(t.km)}</span><span class="unit">km</span>
+        <div class="cap">Total distance to their three group games</div>
+      </div>
+      <div class="tc-grid">
+        <div class="c"><div class="v">~${t.f}</div><div class="k">Flight hours</div></div>
+        <div class="c"><div class="v">${t.tz}</div><div class="k">Time zone${t.tz===1?'':'s'}</div></div>
+        <div class="c"><div class="v">${t.minGap}</div><div class="k">Min rest days</div></div>
+      </div>
+      <div class="tc-base">
+        <div class="row"><span class="lbl">Base camp</span><span class="val">${t.b}</span></div>
+        <div class="row"><span class="lbl">Smartest base nearby</span><span class="val green">${t.idealFacility} · ${t.idealCity.split(',')[0]}</span></div>
+        <div class="row"><span class="lbl">Tightest turnaround</span><span class="val">${fmt(t.crunchKm)} km on ${t.crunchGap} days' rest</span></div>
+        <div class="row"><span class="lbl">${nailed?'Verdict':'Distance left on the table'}</span><span class="val">${nailed?'Nailed it 👍':'−'+fmt(t.idealSaving)+' km'}</span></div>
+      </div>
+      <div class="tc-foot"><span>THE LONG HAUL</span><span>One-way sum · great-circle km</span></div>`;
+    note.textContent='';
+  }
+  sel.addEventListener('change',()=>render(sel.value));
+  // default to the most-traveled team for impact
+  sel.value=ranked[0].code; render(ranked[0].code);
+
+  document.getElementById('tcCopy').addEventListener('click',async()=>{
+    try{ await navigator.clipboard.writeText(summaryText(byCode[sel.value]));
+      note.textContent='Summary copied to clipboard.'; }
+    catch(e){ note.textContent='Copy not available — select and copy the card text manually.'; }
+  });
+  document.getElementById('tcShare').addEventListener('click',async()=>{
+    const t=byCode[sel.value]; const text=summaryText(t);
+    if(navigator.share){ try{ await navigator.share({title:`${t.t} — The Long Haul`,text}); note.textContent=''; }catch(e){} }
+    else { try{ await navigator.clipboard.writeText(text); note.textContent='Share not supported here — summary copied instead.'; }
+      catch(e){ note.textContent='Sharing not supported on this device.'; } }
+  });
+})();
+
+/* ============ MAP (dependency-free, no external libraries) ============ */
+const SVGNS='http://www.w3.org/2000/svg';
+const svgEl=document.getElementById('flightmap');
+let mapMode={type:'team',code:byCode['CUW']?'CUW':TEAMS[0].code};
+
+// Inline Mercator projection calibrated to the host nations (verified on-canvas).
+const MX0=-2.201221, MY1=1.074201, MSCALE=687.2476, MPAD=30, MOFFX=102.842, MOFFY=0.0;
+function project(lat,lon){
+  const x=lon*Math.PI/180;
+  const y=Math.log(Math.tan(Math.PI/4 + (lat*Math.PI/180)/2));
+  return [MPAD+(x-MX0)*MSCALE+MOFFX, MPAD+(MY1-y)*MSCALE+MOFFY];
+}
+function el(name,attrs){
+  const e=document.createElementNS(SVGNS,name);
+  for(const k in attrs) e.setAttribute(k,attrs[k]);
+  return e;
+}
+
+// Static base layer: country outlines (drawn once).
+(function drawBase(){
+  const g=el('g',{class:'baselayer'});
+  (DATA.countryPaths||[]).forEach(d=>g.appendChild(el('path',{d,class:'geo'})));
+  svgEl.appendChild(g);
+})();
+
+function buildControls(){
+  const sel=document.getElementById('teamSel');
+  [...TEAMS].sort((a,b)=>a.t.localeCompare(b.t)).forEach(t=>{
+    const o=document.createElement('option');o.value=t.code;o.textContent=`${t.t}  (${fmt(t.km)} km)`;
+    if(t.code===mapMode.code)o.selected=true;
+    sel.appendChild(o);
+  });
+  sel.onchange=()=>{mapMode={type:'team',code:sel.value};syncChips();renderMap();};
+  const gc=document.getElementById('groupChips');
+  Object.keys(GRP).forEach(g=>{
+    const b=document.createElement('button');b.className='chip';b.textContent='Grp '+g;b.dataset.g=g;
+    b.onclick=()=>{mapMode={type:'group',g};syncChips();sel.selectedIndex=-1;renderMap();};
+    gc.appendChild(b);
+  });
+}
+function syncChips(){
+  document.querySelectorAll('#groupChips .chip').forEach(c=>
+    c.classList.toggle('on',mapMode.type==='group'&&mapMode.g===c.dataset.g));
+}
+
+function arcPath(p1,p2){
+  const dx=p2[0]-p1[0],dy=p2[1]-p1[1];
+  const dr=Math.sqrt(dx*dx+dy*dy)*1.6;
+  return `M${p1[0]},${p1[1]}A${dr},${dr} 0 0,1 ${p2[0]},${p2[1]}`;
+}
+
+function renderMap(){
+  const old=svgEl.querySelector('g.layer'); if(old)old.remove();
+  const g=el('g',{class:'layer'});
+  const teams = mapMode.type==='team'?[byCode[mapMode.code]]:GRP[mapMode.g].map(c=>byCode[c]);
+  let totalKm=0;
+  const venuePts=new Map();   // venue name -> projected point
+  const venueCount=new Map(); // venue name -> times played (team view)
+  const campSet=[];
+  teams.forEach((t,ti)=>{
+    const col = mapMode.type==='group'?GCOLORS[ti%6]:'#ff3d3d';
+    const camp=project(t.blat,t.blon);
+    campSet.push({p:camp,t,col});
+    // Draw one arc from base camp to each distinct venue (one-way).
+    t.venues.forEach(v=>{
+      const vp=project(v.lat,v.lon);
+      venuePts.set(v.v,vp);
+      venueCount.set(v.v,(venueCount.get(v.v)||0)+v.n);
+      totalKm+=v.km*v.n;   // repeated venue counts its distance n times
+      g.appendChild(el('path',{d:arcPath(camp,vp),fill:'none',stroke:col,
+        'stroke-width':mapMode.type==='group'?1.4:2.2,'stroke-linecap':'round',
+        opacity:mapMode.type==='group'?0.55:0.85}));
+    });
+  });
+
+  // Draw venue dots + collect their labels.
+  const labels=[];
+  venuePts.forEach((p,name)=>{
+    g.appendChild(el('circle',{cx:p[0],cy:p[1],r:5,fill:'#2ee6d6'}));
+    const n=venueCount.get(name)||1;
+    const disp=vcity(name);
+    const txt = (mapMode.type==='team' && n>1) ? `${disp}  ×${n}` : disp;
+    labels.push({anchorX:p[0],anchorY:p[1],text:txt,color:'#2ee6d6'});
+  });
+  // In team view the single base label is always on, so include it in the pass.
+  if(mapMode.type==='team'){
+    campSet.forEach(({p,t})=>{
+      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5}));
+      labels.push({anchorX:p[0],anchorY:p[1],text:t.b,color:'#ffd23f',camp:true});
+    });
+  }
+
+  // Place all always-on labels first; capture the boxes they occupy.
+  const occupied=placeLabels(labels,g);
+  // Add the venue/camp dots themselves as obstacles too.
+  venuePts.forEach(p=>occupied.push({x:p[0]-6,y:p[1]-6,w:12,h:12}));
+
+  // Group view: hover/tap base dots, whose labels dodge the occupied boxes.
+  if(mapMode.type!=='team'){
+    campSet.forEach(({p,t,col})=>{
+      occupied.push({x:p[0]-6,y:p[1]-6,w:12,h:12});
+    });
+    campSet.forEach(({p,t,col})=>{
+      const city=t.b.split(',')[0].trim();
+      addHoverDot(g,p,col,`${t.t} — ${city}`,occupied);
+    });
+  }
+
+  svgEl.appendChild(g);
+  const ro=document.getElementById('mapReadout');
+  if(mapMode.type==='team'){const t=teams[0];ro.textContent=`${t.t}: ${fmt(t.km)} km · ${t.f} flight hrs · ${t.tz} tz`;}
+  else{ro.textContent=`Group ${mapMode.g}: ${fmt(totalKm)} km combined`;}
+}
+
+// Test whether a candidate box overlaps any occupied box.
+function hits(box,boxes){
+  return boxes.some(o=> box.x < o.x+o.w && box.x+box.w > o.x && box.y < o.y+o.h && box.y+box.h > o.y);
+}
+
+// A base-camp dot whose "Team — City" label appears on hover/tap.
+// The label finds an open gap among `occupied` boxes and connects with a leader line.
+function addHoverDot(g,p,col,text,occupied){
+  const wrap=el('g',{style:'cursor:pointer'});
+  const w=text.length*6.2, h=15;
+  // Candidate offsets (dx,dy) from the dot, in priority order: right, left, up, down, diagonals.
+  const cands=[[14,4],[-14,4],[0,-16],[0,22],[14,-14],[-14,-14],[14,20],[-14,20],[28,4],[-28,4]];
+  let best=null;
+  for(const [dx,dy] of cands){
+    const anchorStart = dx>=0;
+    const bx = anchorStart ? p[0]+dx : p[0]+dx-w;
+    const by = p[1]+dy-11;
+    const box={x:bx,y:by,w,h};
+    if(bx<4 || bx+w>956) continue;           // stay on canvas
+    if(!hits(box,occupied)){ best={dx,dy,anchorStart}; break; }
+  }
+  if(!best) best={dx:14,dy:4,anchorStart:true};   // fallback: right of dot
+  const lx=p[0]+best.dx, ly=p[1]+best.dy;
+  // Reserve this label's box so sibling base labels don't reuse the gap.
+  occupied.push({x:best.anchorStart?lx:lx-w, y:ly-11, w, h});
+
+  const leader=el('path',{d:`M${p[0]},${p[1]} L${lx-(best.anchorStart?3:-3)},${ly-3}`,
+    fill:'none',stroke:col,'stroke-width':0.8,opacity:0});
+  const tx=el('text',{x:lx,y:ly,class:'maplabel',
+    style:`fill:${col}`,'text-anchor':best.anchorStart?'start':'end',
+    'font-weight':500,opacity:0});
+  tx.textContent=text;
+  const dot=el('circle',{cx:p[0],cy:p[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5});
+  const hit=el('circle',{cx:p[0],cy:p[1],r:12,fill:'transparent'});
+  const show=()=>{tx.setAttribute('opacity',1);leader.setAttribute('opacity',0.5);};
+  const hide=()=>{tx.setAttribute('opacity',0);leader.setAttribute('opacity',0);};
+  hit.addEventListener('mouseenter',show);
+  hit.addEventListener('mouseleave',hide);
+  hit.addEventListener('click',e=>{e.stopPropagation();
+    (tx.getAttribute('opacity')==='1'?hide:show)();});
+  wrap.appendChild(leader); wrap.appendChild(dot); wrap.appendChild(hit); wrap.appendChild(tx);
+  g.appendChild(wrap);
+}
+
+// Place labels beside their dots, pushing apart any that would overlap and
+// drawing a thin leader line from each displaced label back to its dot.
+// Returns the list of occupied bounding boxes so hover labels can avoid them.
+function placeLabels(labels,g,lineSegs){
+  const ROWH=15, OFF=11, W=960, CHARW=6.2, PAD=3;
+  lineSegs=lineSegs||[];
+  const dotBoxes=labels.map(l=>({x:l.anchorX-6,y:l.anchorY-6,w:12,h:12}));
+  const placed=[];
+  const overlaps=(a,b)=> a.x < b.x+b.w+PAD && a.x+a.w+PAD > b.x && a.y < b.y+b.h+PAD && a.y+a.h+PAD > b.y;
+  const boxFor=(l,x,y,side)=>({x: side===1 ? x : x-l._w, y:y-11, w:l._w, h:ROWH});
+  // does the leader line (anchor -> label start) cross any connector segment?
+  const segCross=(x1,y1,x2,y2,x3,y3,x4,y4)=>{
+    const d=(x2-x1)*(y4-y3)-(y2-y1)*(x4-x3);
+    if(Math.abs(d)<1e-6) return false;
+    const t=((x3-x1)*(y4-y3)-(y3-y1)*(x4-x3))/d;
+    const u=((x3-x1)*(y2-y1)-(y3-y1)*(x2-x1))/d;
+    return t>=0&&t<=1&&u>=0&&u<=1;
+  };
+  labels.forEach(l=>{ l._w=l.text.length*CHARW; });
+  const order=[...labels].sort((a,b)=> b._w-a._w || a.anchorY-b.anchorY);
+  order.forEach(l=>{
+    const prefSide = l.anchorX > W-130 ? -1 : 1;
+    const cands=[];
+    [prefSide,-prefSide].forEach(side=>{
+      for(const dy of [0,ROWH,-ROWH,2*ROWH,-2*ROWH,3*ROWH,-3*ROWH]){
+        cands.push({side, x:l.anchorX+side*OFF, y:l.anchorY+3+dy, dy:Math.abs(dy), sidePref: side===prefSide?0:1});
+      }
+    });
+    let best=null;
+    for(const c of cands){
+      const bx=boxFor(l,c.x,c.y,c.side);
+      if(placed.some(pb=>overlaps(bx,pb))) continue;       // hard: no label overlap
+      if(dotBoxes.some(db=>overlaps(bx,db))) continue;      // hard: no dot overlap
+      // leader line endpoint (where the line meets the text)
+      const lx=c.x - c.side*3, ly=c.y-3;
+      const crossings=lineSegs.reduce((n,s)=> n + (segCross(l.anchorX,l.anchorY,lx,ly,s[0],s[1],s[2],s[3])?1:0),0);
+      // also penalise the label BOX sitting across a connector (not just the leader)
+      const boxMid=[c.side===1?c.x+l._w/2:c.x-l._w/2, c.y-4];
+      const boxCross=lineSegs.reduce((n,s)=> n + (segCross(l.anchorX,l.anchorY,boxMid[0],boxMid[1],s[0],s[1],s[2],s[3])?1:0),0);
+      const score = crossings*100 + boxCross*60 + c.dy*1.2 + c.sidePref*8;
+      if(best===null || score<best.score){ best={...c, score, box:bx}; }
+    }
+    if(best===null){ // fallback: preferred side at anchor level
+      best={side:prefSide, x:l.anchorX+prefSide*OFF, y:l.anchorY+3, box:boxFor(l,l.anchorX+prefSide*OFF,l.anchorY+3,prefSide)};
+    }
+    l.side=best.side; l.x=best.x; l.y=best.y;
+    placed.push(best.box);
+  });
+  const boxes=[];
+  labels.forEach(l=>{
+    const displaced = Math.abs(l.y-3 - l.anchorY) > 2 || Math.abs(l.x - (l.anchorX+l.side*OFF))>0.1;
+    if(displaced){
+      g.appendChild(el('path',{
+        d:`M${l.anchorX},${l.anchorY} L${l.x - l.side*3},${l.y-3}`,
+        fill:'none',stroke:l.color,'stroke-width':0.8,opacity:0.5}));
+    }
+    const tx=el('text',{x:l.x,y:l.y,class:'maplabel',fill:l.color,
+      style:`fill:${l.color}`,
+      'text-anchor': l.side===1?'start':'end','font-weight':500});
+    tx.textContent=l.text;
+    g.appendChild(tx);
+    boxes.push({x:l.side===1?l.x:l.x-l._w, y:l.y-11, w:l._w, h:ROWH});
+  });
+  return boxes;
+}
+
+buildControls();
+renderMap();
+
+/* ============ GROUP VIEW ============ */
+(function(){
+  const grid=document.getElementById('groupGrid');
+  const maxKm=Math.max(...TEAMS.map(t=>t.km));
+  // group draw difficulty = avg floor
+  const gdiff={};
+  Object.entries(GRP).forEach(([g,codes])=>{
+    gdiff[g]=Math.round(codes.reduce((a,c)=>a+byCode[c].floor,0)/codes.length);
+  });
+  const diffRank=Object.entries(gdiff).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+  const diffWord=pos=> pos<=3?'a brutal draw': pos<=6?'a tough draw': pos<=9?'a moderate draw':'an easy draw';
+  Object.entries(GRP).forEach(([g,codes])=>{
+    const teams=codes.map(c=>byCode[c]).sort((a,b)=>b.km-a.km);
+    const rankPos=diffRank.indexOf(g)+1;
+    const rows=teams.map(t=>{
+      const w=Math.max(4,Math.round(t.km/maxKm*100));
+      const col=t.pen>2000?'var(--hot)':t.pen>0?'var(--hot2)':'var(--grass)';
+      return `<div class="trow"><span class="tn">${t.t}</span>
+        <span class="tbarwrap"><span class="tbar" style="width:${w}%;background:${col}"></span></span>
+        <span class="tv">${fmt(t.km)}</span></div>`;
+    }).join('');
+    grid.insertAdjacentHTML('beforeend',`<div class="gcard">
+      <div class="gtag">${g}</div>
+      <h3>Group ${g}</h3>
+      <div class="gmeta">Draw difficulty: ${diffWord(rankPos)} (#${rankPos} of 12)</div>
+      ${rows}
+    </div>`);
+  });
+})();
+
+/* ============ DRAW LUCK (venue spread only) ============ */
+(function(){
+  const most=TEAMS.reduce((a,t)=>t.spread>a.spread?t:a);
+  const least=TEAMS.reduce((a,t)=>t.spread<a.spread?t:a);
+  document.getElementById('dlCallout').innerHTML=
+    `<b>${most.t}</b> drew the most scattered group in the tournament — its three host cities span <b>${fmt(most.spread)} km</b>, with the two most distant <b>${fmt(most.maxHop)} km</b> apart. <b>${least.t}</b> got the kindest draw: everything packed into <b>${fmt(least.spread)} km</b>.`;
+  const list=document.getElementById('dlList');
+  const sorted=[...TEAMS].sort((a,b)=>b.spread-a.spread);
+  const maxSpread=Math.max(...TEAMS.map(t=>t.spread));
+  sorted.forEach((t,i)=>{
+    const w=t.spread/maxSpread*100;
+    // distinct venue cities (real names), marking a repeat with ×2
+    const counts={};
+    t.venues.forEach(v=>{counts[v.v]=(counts[v.v]||0)+(v.n||1);});
+    const vstr=Object.entries(counts).map(([v,n])=>vcity(v)+(n>1?` ×${n}`:'')).join(' · ');
+    const star=t.venueCat==='b2b'?'<span class="dl-star" title="Plays one host city twice, back-to-back">**</span>'
+              :t.venueCat==='nonconsec'?'<span class="dl-star" title="Plays one host city twice, non-consecutively">*</span>':'';
+    list.insertAdjacentHTML('beforeend',`<div class="dlrow">
+      <span class="rk">${i+1}</span>
+      <span class="nm">${t.t}${star} <small>${t.g}</small></span>
+      <span class="stack"><span class="seg-spread" style="width:${w}%"></span></span>
+      <span class="amt">${fmt(t.spread)} km</span>
+    </div>`);
+  });
+})();
+
+/* ============ BEST BASE ============ */
+(function(){
+  const grid=document.getElementById('bbGrid');
+  const map=document.getElementById('bbMap');
+  const readout=document.getElementById('bbReadout');
+
+  function drawBase(){
+    while(map.firstChild) map.removeChild(map.firstChild);
+    const g=el('g',{});
+    (DATA.countryPaths||[]).forEach(d=>g.appendChild(el('path',{d,class:'geo'})));
+    map.appendChild(g);
+    return g;
+  }
+  function showTeam(t){
+    const g=drawBase();
+    const base=project(t.blat,t.blon);
+    const ideal=project(t.idealLat,t.idealLon);
+    const lineSegs=[];   // connector lines labels should not cross
+    // faint lines from each venue to the ideal point (why it sits there)
+    t.venues.forEach(v=>{
+      const vp=project(v.lat,v.lon);
+      g.appendChild(el('path',{d:`M${ideal[0]},${ideal[1]} L${vp[0]},${vp[1]}`,
+        fill:'none',stroke:'#2ee6d6','stroke-width':1,opacity:0.32,'stroke-dasharray':'3 4'}));
+      lineSegs.push([ideal[0],ideal[1],vp[0],vp[1]]);
+    });
+    // the move: actual base -> ideal town
+    if(!t.idealOptimal){
+      g.appendChild(el('path',{d:`M${base[0]},${base[1]} L${ideal[0]},${ideal[1]}`,
+        fill:'none',stroke:'#ff6b35','stroke-width':2.4,'stroke-linecap':'round','stroke-dasharray':'2 6'}));
+      lineSegs.push([base[0],base[1],ideal[0],ideal[1]]);
+    }
+    // ideal town (green) and actual base (gold)
+    g.appendChild(el('circle',{cx:ideal[0],cy:ideal[1],r:7,fill:'#3ddc84',stroke:'#0a0e1a','stroke-width':1.5}));
+    g.appendChild(el('circle',{cx:base[0],cy:base[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5}));
+    // venue dots LAST so they're never hidden behind the ideal/base dots.
+    // If a venue sits on top of the ideal dot, nudge it so both stay visible.
+    const labels=[];
+    t.venues.forEach(v=>{
+      let vp=project(v.lat,v.lon);
+      const onIdeal = Math.hypot(vp[0]-ideal[0],vp[1]-ideal[1])<10;
+      if(onIdeal){ vp=[vp[0]+9,vp[1]+9]; }   // nudge clear of the green dot
+      g.appendChild(el('circle',{cx:vp[0],cy:vp[1],r:5,fill:'#2ee6d6',stroke:'#0a0e1a','stroke-width':1.2}));
+      const nm=vcity(v.v)+(v.n>1?`  ×${v.n}`:'');
+      labels.push({anchorX:vp[0],anchorY:vp[1],text:nm,color:'#2ee6d6'});
+    });
+    // labels via the shared collision-aware placer
+    const facName=t.idealFacility;
+    const idealCity=t.idealCity.split(',')[0];
+    labels.push({anchorX:ideal[0],anchorY:ideal[1],text:`Ideal: ${facName}`,color:'#3ddc84'},
+                {anchorX:base[0],anchorY:base[1],text:`Actual: ${t.b.split(',')[0]}`,color:'#ffd23f'});
+    placeLabels(labels,g,lineSegs);
+    if(t.idealOptimal){
+      const gap = t.idealSaving<0
+        ? `already as good as any catalogued elite facility`
+        : `within ${fmt(t.idealSaving)} km of the closest elite facility`;
+      readout.innerHTML=`<b>${t.t}</b> nailed it — based in ${t.b.split(',')[0]}, ${gap} (${facName}, ${idealCity}).`;
+    }else{
+      readout.innerHTML=`<b>${t.t}</b> based in ${t.b.split(',')[0]} · the closest elite training base was <b style="color:#3ddc84">${facName}</b> in ${idealCity} — a move that saves ${fmt(t.idealSaving)} km.`;
+    }
+  }
+
+  // Sort by biggest saving first; near-optimal teams sink to the bottom.
+  const sorted=[...TEAMS].sort((a,b)=>b.idealSaving-a.idealSaving);
+  sorted.forEach((t,i)=>{
+    const chose=t.b.split(',')[0].trim();
+    const facName=t.idealFacility;
+    const idealCity=t.idealCity.split(',')[0];
+    const row=document.createElement('div');
+    row.className='bbrow'+(t.idealOptimal?' opt':'');
+    row.dataset.code=t.code;
+    if(t.idealOptimal){
+      const gap = t.idealSaving<0
+        ? `already beats every catalogued facility`
+        : `within ${fmt(t.idealSaving)} km of the nearest elite facility`;
+      row.innerHTML=`<span class="bbrk">${i+1}</span>
+        <span class="bbteam">${t.t}</span>
+        <span class="bbmove">Based in <b style="color:#cfd4e0">${chose}</b> — ${gap}</span>
+        <span class="bbtag">Nailed it</span>`;
+    }else{
+      row.innerHTML=`<span class="bbrk">${i+1}</span>
+        <span class="bbteam">${t.t}</span>
+        <span class="bbmove"><span class="from">${chose}</span><span class="arr">→</span><span class="to">${facName}</span> <span style="color:var(--muted)">· ${idealCity}</span></span>
+        <span class="bbsave">−${fmt(t.idealSaving)} km</span>`;
+    }
+    row.addEventListener('click',()=>{
+      document.querySelectorAll('.bbrow.sel').forEach(r=>r.classList.remove('sel'));
+      row.classList.add('sel');
+      showTeam(t);
+      map.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+    grid.appendChild(row);
+  });
+  drawBase();   // empty map until a team is chosen
+})();
+
+/* ============ RANKED LIST ============ */
+(function(){
+  let metric='km';
+  const U={km:'km',f:'hrs',tz:'zones'};
+  const list=document.getElementById('rankList');
+  function render(){
+    const sorted=[...TEAMS].sort((a,b)=>b[metric]-a[metric]);
+    const max=Math.max(...sorted.map(t=>t[metric]))||1;
+    list.innerHTML=sorted.map((t,i)=>{
+      const w=Math.max(2,Math.round(t[metric]/max*100));
+      const v=metric==='f'?t.f.toFixed(1):fmt(t[metric]);
+      const legs=t.venues.map(vn=>
+        `<div class="dl-line"><i>${vcity(vn.v)}</i>${vn.n>1?` ×${vn.n}`:''} — ${fmt(vn.km)} km from base${vn.tz?` · ${vn.tz} tz`:''}</div>`).join('');
+      return `<div class="rrow" data-c="${t.code}">
+        <div class="top">
+          <span class="rk">${i+1}</span>
+          <span class="nm">${t.t}<small>Group ${t.g}</small></span>
+          <span class="val">${v}<small> ${U[metric]}</small></span>
+        </div>
+        <div class="barwrap"><div class="bar" style="width:${w}%"></div></div>
+        <div class="detail">
+          <div class="camp">Based in ${t.b} · penalty ${t.pen>=0?'+':'−'}${fmt(Math.abs(t.pen))} km</div>
+          ${legs}
+        </div>
+      </div>`;
+    }).join('');
+    list.querySelectorAll('.rrow').forEach(r=>r.onclick=()=>r.classList.toggle('open'));
+  }
+  document.querySelectorAll('.rank-controls .chip').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('.rank-controls .chip').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');metric=b.dataset.m;render();
+  });
+  render();
+})();
+
+/* ============ SCROLL FADE ============ */
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
+  document.querySelectorAll('section .wrap > *').forEach(el=>{el.classList.add('fade');io.observe(el)});
+}
+</script>
+</body>
+</html>
