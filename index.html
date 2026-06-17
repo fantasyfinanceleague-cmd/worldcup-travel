@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Long Haul — World Cup 2026 Group Stage Travel</title>
+<title>The Long Haul: World Cup 2026 Group Stage Travel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
@@ -136,7 +136,7 @@ select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--l
 .trow{display:flex;align-items:center;gap:10px;margin:9px 0}
 .trow .tn{font-weight:700;font-size:14px;width:120px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .trow .tbarwrap{flex:1;background:rgba(255,255,255,.06);border-radius:4px;height:14px;overflow:hidden}
-.trow .tbar{height:100%;border-radius:4px}
+.trow .tbar{display:block;height:100%;border-radius:4px}
 .trow .tv{font-family:'Archivo Narrow';font-weight:700;font-size:13px;width:62px;text-align:right;flex:none;color:#cfd4e0}
 .gband{font-size:12px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .gband b{color:var(--hot2);font-weight:700}
@@ -247,7 +247,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
 <header class="hero"><div class="wrap">
   <span class="kicker">FIFA World Cup 2026 · Group Stage</span>
   <h1>Who flies<br>the <em>farthest?</em></h1>
-  <p class="sub">For each of the 48 teams we measured the distance from its base camp to all three group-stage venues and added them up — a clean <strong>total distance to their matches</strong>, no routing assumptions. The biggest numbers aren't about a brutal draw. They're about <strong>where teams chose to sleep.</strong></p>
+  <p class="sub">For each of the 48 teams we measured the distance from its base camp to all three group-stage venues and added them up. A clean <strong>total distance to their matches</strong>, no routing assumptions. The biggest numbers aren't about a brutal draw. They're about <strong>where teams chose to sleep.</strong></p>
   <div class="stat-strip" id="heroStats"></div>
 </div></header>
 
@@ -281,7 +281,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
     <div class="map-legend">
       <span><i class="dot-camp"></i>Base camp</span>
       <span><i class="dot-venue"></i>Match venue</span>
-      <span style="color:var(--hot)">— Base camp to venue</span>
+      <span style="color:var(--hot)">Base camp to venue</span>
       <span id="mapReadout" style="margin-left:auto;color:var(--gold);font-weight:700"></span>
     </div>
   </div>
@@ -289,31 +289,31 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
 
 <section id="groups"><div class="wrap">
   <div class="sec-head"><div class="num">03</div><h2>The <em>fair</em> comparison</h2></div>
-  <p class="lead">Within a group, all four teams play the same six matches in the same cities — so comparing them <strong>isolates base-camp choice</strong>. Bars show each team's total distance to its matches. Each group is also tagged with its <strong>draw difficulty</strong> — how spread-out its six host cities are, regardless of where anyone chose to base.</p>
+  <p class="lead">Within a group, all four teams play the same six matches in the same cities, so comparing them <strong>isolates base-camp choice</strong>. Bars show each team's total distance to its matches. Each group is also tagged with its <strong>draw difficulty</strong>: how spread-out its six host cities are, regardless of where anyone chose to base.</p>
   <div class="group-grid" id="groupGrid"></div>
 </div></section>
 
 <section id="drawluck"><div class="wrap">
   <div class="sec-head"><div class="num">04</div><h2>Luck of the <em>draw</em></h2></div>
-  <p class="lead">Before any team picks where to sleep, the draw deals them a geography. Some groups are tight clusters; others are flung across the continent. This is pure luck — how far apart a team's three host cities are, measured with no base-camp choices involved. The wider the spread, the harder the trip was always going to be. Three patterns show up: <strong>27 teams</strong> play three different cities; <strong>7 play one city twice but non-consecutively</strong> — there, away, then back (marked <span class="dl-star">*</span>); and <strong>14 play one city twice back-to-back</strong>, a genuine stay-put break (marked <span class="dl-star">**</span>). For the repeats, the spread counts that city's distance for both visits, since it's a trip they make either way.</p>
+  <p class="lead">Before any team picks where to sleep, the draw deals them a geography. Some groups are tight clusters; others are flung across the continent. This is pure luck: how far apart a team's three host cities are, measured with no base-camp choices involved. The wider the spread, the harder the trip was always going to be. Three patterns show up: <strong>27 teams</strong> play three different cities; <strong>7 play one city twice but non-consecutively</strong>, there, away, then back (marked <span class="dl-star">*</span>); and <strong>14 play one city twice back-to-back</strong>, a genuine stay-put break (marked <span class="dl-star">**</span>). For the repeats, the spread counts that city's distance for both visits, since it's a trip they make either way.</p>
   <div class="dl-note" id="dlCallout"></div>
   <div id="dlList"></div>
 </div></section>
 
 <section id="bestbase"><div class="wrap">
   <div class="sec-head"><div class="num">05</div><h2>The base they <em>should have</em> picked</h2></div>
-  <p class="lead">If each team had based at the real training facility that minimises travel to its three matches — drawn from a catalogue of ~155 pro grounds (MLS, USL, Liga MX), major university athletic complexes, and elite prep sites — which would it be, and how far is that from where they actually set up? Tap any team to see the move. The gap is the <strong>self-inflicted</strong> distance, made concrete.</p>
+  <p class="lead">If each team had based at the real training facility that minimises travel to its three matches, drawn from a catalogue of ~155 pro grounds (MLS, USL, Liga MX), major university athletic complexes, and elite prep sites, which would it be, and how far is that from where they actually set up? Tap any team to see the move. The gap is the <strong>self-inflicted</strong> distance, made concrete.</p>
   <div class="bb-mapwrap">
     <svg id="bbMap" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet" style="width:100%;aspect-ratio:960/600;min-height:340px"></svg>
     <div class="bb-readout" id="bbReadout">Tap a team below to see where they should have based.</div>
   </div>
   <div class="bb-grid" id="bbGrid"></div>
-  <p class="lead" style="margin-top:24px;font-size:15px;color:var(--muted)">We snap each team's travel-minimising location to the nearest real, verifiable training facility in our catalogue (excluding facilities in the team's own match cities). It's the closest <em>catalogued</em> elite base, not a claim about every facility that exists. For 14 teams it sits within 100 km of where they actually based — they nailed it.</p>
+  <p class="lead" style="margin-top:24px;font-size:15px;color:var(--muted)">We snap each team's travel-minimising location to the nearest real, verifiable training facility in our catalogue (excluding facilities in the team's own match cities). It's the closest <em>catalogued</em> elite base, not a claim about every facility that exists. For 14 teams it sits within 100 km of where they actually based. They nailed it.</p>
 </div></section>
 
 <section id="ranking"><div class="wrap">
   <div class="sec-head"><div class="num">06</div><h2>The full <em>ranking</em></h2></div>
-  <p class="lead">All 48 teams, sortable. Tap any row to expand the distance to each of its three matches. Remember: flight hours assume every leg is flown — short Mexican and Californian hops would really be driven.</p>
+  <p class="lead">All 48 teams, sortable. Tap any row to expand the distance to each of its three matches. Remember: flight hours assume every leg is flown. Short Mexican and Californian hops would really be driven.</p>
   <div class="rank-controls">
     <span class="lbl" style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600">Rank by</span>
     <button class="chip on" data-m="km">Total distance</button>
@@ -327,19 +327,19 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
   <div class="sec-head"><div class="num">07</div><h2>Method &amp; <em>sources</em></h2></div>
   <div class="method">
     <h3>The travel model</h3>
-    <p>Each team's total is the sum of three distances: from its base camp to the venue of each of its three group-stage matches. It deliberately makes no assumptions about routing or return trips — it's simply how far each match is from home, added together. If you want to picture round trips, double it; if a team stays regional between matches, the real figure is lower. This measure stays out of that debate.</p>
+    <p>Each team's total is the sum of three distances: from its base camp to the venue of each of its three group-stage matches. It deliberately makes no assumptions about routing or return trips. It's simply how far each match is from home, added together. If you want to picture round trips, double it; if a team stays regional between matches, the real figure is lower. This measure stays out of that debate.</p>
     <p>When two of a team's matches are at the same venue, that distance appears twice in the sum (marked ×2), because they make that trip for both matches. The measure captures the spread of a team's assignments from its home base, not the precise journey it flies.</p>
     <h3>Distance</h3>
-    <p>Great-circle (haversine) distance between coordinates, in kilometres. This is straight-line "as the crow flies" — real routings are slightly longer.</p>
+    <p>Great-circle (haversine) distance between coordinates, in kilometres. This is straight-line "as the crow flies." Real routings are slightly longer.</p>
     <h3>Flight hours</h3>
     <p>An illustrative estimate: <code>0.75 h + km / 800</code> for each of the three base-to-venue legs, summed. It assumes every leg is flown. Several short legs (e.g. Mexico City–Guadalajara at ~470 km) would realistically be ground travel, so treat flight hours as illustrative rather than literal.</p>
     <h3>Time zones</h3>
-    <p>The maximum number of time-zone boundaries crossed on any single leg, DST-adjusted for June 2026. Because the host geography is US-heavy, most teams stay within one or two zones — so this metric separates teams less sharply than distance.</p>
+    <p>The maximum number of time-zone boundaries crossed on any single leg, DST-adjusted for June 2026. Because the host geography is US-heavy, most teams stay within one or two zones, so this metric separates teams less sharply than distance.</p>
     <h3>The floor &amp; penalty</h3>
-    <p>The "floor" is the route distance a team would face if based at the geographic centroid of its three venues — the best feasible base camp given its fixtures, using the same routing rule. The "penalty" is actual minus floor. Negative penalties mean a base camp beat the centroid by hugging clustered venues.</p>
+    <p>The "floor" is the route distance a team would face if based at the geographic centroid of its three venues, the best feasible base camp given its fixtures, using the same routing rule. The "penalty" is actual minus floor. Negative penalties mean a base camp beat the centroid by hugging clustered venues.</p>
     <h3>Sources</h3>
-    <p class="src">Match schedule: official FIFA fixture list (uploaded), cross-checked against the published NBC Sports schedule. Base camps: U.S. Soccer's confirmed Team Base Camp list. Stadium and base-camp coordinates geocoded to venue/town centroids — distances are precise to within a few kilometres, not metres.</p>
-    <p class="src">A note on framing: this analysis measures real base-camp-to-match travel, which blends the draw with each team's own siting decision. It is <em>not</em> a measure of which teams got the hardest schedule — section 03 separates those.</p>
+    <p class="src">Match schedule: official FIFA fixture list (uploaded), cross-checked against the published NBC Sports schedule. Base camps: U.S. Soccer's confirmed Team Base Camp list. Stadium and base-camp coordinates geocoded to venue/town centroids. Distances are precise to within a few kilometres, not metres.</p>
+    <p class="src">A note on framing: this analysis measures real base-camp-to-match travel, which blends the draw with each team's own siting decision. It is <em>not</em> a measure of which teams got the hardest schedule. Section 03 separates those.</p>
   </div>
 </div></section>
 
@@ -388,12 +388,12 @@ const GCOLORS=['#ff3d3d','#ff6b35','#ffd23f','#3ddc84','#2ee6d6','#9d7cff'];
     const base=t.b, fac=t.idealFacility, save=t.idealSaving;
     let l3 = save>=100
       ? `Could've saved ${fmt(save)} km by basing at ${fac} (${t.idealCity}).`
-      : `Smartly based — within ${fmt(Math.max(0,save))} km of the ideal facility.`;
+      : `Smartly based, within ${fmt(Math.max(0,save))} km of the ideal facility.`;
     return `${t.t} · World Cup 2026 travel\n`+
       `${fmt(t.km)} km to their 3 group games (#${r} of 48 farthest)\n`+
       `~${t.f} flight hours · ${t.tz} time zone${t.tz===1?'':'s'} crossed\n`+
       `Tightest turnaround: ${fmt(t.crunchKm)} km on ${t.crunchGap} days' rest\n`+
-      `Base: ${base}\n${l3}\n— THE LONG HAUL`;
+      `Base: ${base}\n${l3}\nTHE LONG HAUL`;
   }
   function render(code){
     const t=byCode[code]; const r=rankOf[code];
@@ -428,12 +428,12 @@ const GCOLORS=['#ff3d3d','#ff6b35','#ffd23f','#3ddc84','#2ee6d6','#9d7cff'];
   document.getElementById('tcCopy').addEventListener('click',async()=>{
     try{ await navigator.clipboard.writeText(summaryText(byCode[sel.value]));
       note.textContent='Summary copied to clipboard.'; }
-    catch(e){ note.textContent='Copy not available — select and copy the card text manually.'; }
+    catch(e){ note.textContent='Copy not available. Select and copy the card text manually.'; }
   });
   document.getElementById('tcShare').addEventListener('click',async()=>{
     const t=byCode[sel.value]; const text=summaryText(t);
-    if(navigator.share){ try{ await navigator.share({title:`${t.t} — The Long Haul`,text}); note.textContent=''; }catch(e){} }
-    else { try{ await navigator.clipboard.writeText(text); note.textContent='Share not supported here — summary copied instead.'; }
+    if(navigator.share){ try{ await navigator.share({title:`${t.t} - The Long Haul`,text}); note.textContent=''; }catch(e){} }
+    else { try{ await navigator.clipboard.writeText(text); note.textContent='Share not supported here. Summary copied instead.'; }
       catch(e){ note.textContent='Sharing not supported on this device.'; } }
   });
 })();
@@ -528,23 +528,25 @@ function renderMap(){
       g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5}));
       labels.push({anchorX:p[0],anchorY:p[1],text:t.b,color:'#ffd23f',camp:true});
     });
+  } else {
+    // Group view: draw each team's base dot in that team's line color, with an
+    // always-on team-name label so you can tell which dot is which team.
+    campSet.forEach(({p,t,col})=>{
+      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:col,stroke:'#0a0e1a','stroke-width':1.5}));
+      labels.push({anchorX:p[0],anchorY:p[1],text:t.t,color:col,camp:true});
+    });
   }
 
-  // Place all always-on labels first; capture the boxes they occupy.
-  const occupied=placeLabels(labels,g);
+  // Build connector line segments (base to venues) so labels avoid crossing them.
+  const lineSegs=[];
+  campSet.forEach(({p,t})=>{
+    t.venues.forEach(v=>{ const vp=venuePts.get(v.v); if(vp) lineSegs.push([p[0],p[1],vp[0],vp[1]]); });
+  });
+
+  // Place all always-on labels; capture the boxes they occupy.
+  const occupied=placeLabels(labels,g,lineSegs);
   // Add the venue/camp dots themselves as obstacles too.
   venuePts.forEach(p=>occupied.push({x:p[0]-6,y:p[1]-6,w:12,h:12}));
-
-  // Group view: hover/tap base dots, whose labels dodge the occupied boxes.
-  if(mapMode.type!=='team'){
-    campSet.forEach(({p,t,col})=>{
-      occupied.push({x:p[0]-6,y:p[1]-6,w:12,h:12});
-    });
-    campSet.forEach(({p,t,col})=>{
-      const city=t.b.split(',')[0].trim();
-      addHoverDot(g,p,col,`${t.t} — ${city}`,occupied);
-    });
-  }
 
   svgEl.appendChild(g);
   const ro=document.getElementById('mapReadout');
@@ -557,7 +559,7 @@ function hits(box,boxes){
   return boxes.some(o=> box.x < o.x+o.w && box.x+box.w > o.x && box.y < o.y+o.h && box.y+box.h > o.y);
 }
 
-// A base-camp dot whose "Team — City" label appears on hover/tap.
+// A base-camp dot whose "Team / City" label appears on hover/tap.
 // The label finds an open gap among `occupied` boxes and connects with a leader line.
 function addHoverDot(g,p,col,text,occupied){
   const wrap=el('g',{style:'cursor:pointer'});
@@ -615,6 +617,9 @@ function placeLabels(labels,g,lineSegs){
     return t>=0&&t<=1&&u>=0&&u<=1;
   };
   labels.forEach(l=>{ l._w=l.text.length*CHARW; });
+  const MARGIN=6;
+  // how far a box pokes past the [MARGIN, W-MARGIN] horizontal bounds
+  const edgeOverflow=(bx)=> Math.max(0, MARGIN-bx.x) + Math.max(0, (bx.x+bx.w)-(W-MARGIN));
   const order=[...labels].sort((a,b)=> b._w-a._w || a.anchorY-b.anchorY);
   order.forEach(l=>{
     const prefSide = l.anchorX > W-130 ? -1 : 1;
@@ -635,14 +640,20 @@ function placeLabels(labels,g,lineSegs){
       // also penalise the label BOX sitting across a connector (not just the leader)
       const boxMid=[c.side===1?c.x+l._w/2:c.x-l._w/2, c.y-4];
       const boxCross=lineSegs.reduce((n,s)=> n + (segCross(l.anchorX,l.anchorY,boxMid[0],boxMid[1],s[0],s[1],s[2],s[3])?1:0),0);
-      const score = crossings*100 + boxCross*60 + c.dy*1.2 + c.sidePref*8;
+      const score = crossings*100 + boxCross*60 + edgeOverflow(bx)*30 + c.dy*1.2 + c.sidePref*8;
       if(best===null || score<best.score){ best={...c, score, box:bx}; }
     }
     if(best===null){ // fallback: preferred side at anchor level
       best={side:prefSide, x:l.anchorX+prefSide*OFF, y:l.anchorY+3, box:boxFor(l,l.anchorX+prefSide*OFF,l.anchorY+3,prefSide)};
     }
+    // Hard clamp: nudge the label horizontally so its box stays within the map bounds.
+    const ov=edgeOverflow(best.box);
+    if(ov>0){
+      if(best.box.x < MARGIN) best.x += (MARGIN - best.box.x);
+      else if(best.box.x+best.box.w > W-MARGIN) best.x -= ((best.box.x+best.box.w)-(W-MARGIN));
+    }
     l.side=best.side; l.x=best.x; l.y=best.y;
-    placed.push(best.box);
+    placed.push(boxFor(l,l.x,l.y,l.side));
   });
   const boxes=[];
   labels.forEach(l=>{
@@ -700,7 +711,7 @@ renderMap();
   const most=TEAMS.reduce((a,t)=>t.spread>a.spread?t:a);
   const least=TEAMS.reduce((a,t)=>t.spread<a.spread?t:a);
   document.getElementById('dlCallout').innerHTML=
-    `<b>${most.t}</b> drew the most scattered group in the tournament — its three host cities span <b>${fmt(most.spread)} km</b>, with the two most distant <b>${fmt(most.maxHop)} km</b> apart. <b>${least.t}</b> got the kindest draw: everything packed into <b>${fmt(least.spread)} km</b>.`;
+    `<b>${most.t}</b> drew the most scattered group in the tournament. Its three host cities span <b>${fmt(most.spread)} km</b>, with the two most distant <b>${fmt(most.maxHop)} km</b> apart. <b>${least.t}</b> got the kindest draw: everything packed into <b>${fmt(least.spread)} km</b>.`;
   const list=document.getElementById('dlList');
   const sorted=[...TEAMS].sort((a,b)=>b.spread-a.spread);
   const maxSpread=Math.max(...TEAMS.map(t=>t.spread));
@@ -776,9 +787,9 @@ renderMap();
       const gap = t.idealSaving<0
         ? `already as good as any catalogued elite facility`
         : `within ${fmt(t.idealSaving)} km of the closest elite facility`;
-      readout.innerHTML=`<b>${t.t}</b> nailed it — based in ${t.b.split(',')[0]}, ${gap} (${facName}, ${idealCity}).`;
+      readout.innerHTML=`<b>${t.t}</b> nailed it, based in ${t.b.split(',')[0]}, ${gap} (${facName}, ${idealCity}).`;
     }else{
-      readout.innerHTML=`<b>${t.t}</b> based in ${t.b.split(',')[0]} · the closest elite training base was <b style="color:#3ddc84">${facName}</b> in ${idealCity} — a move that saves ${fmt(t.idealSaving)} km.`;
+      readout.innerHTML=`<b>${t.t}</b> based in ${t.b.split(',')[0]} · the closest elite training base was <b style="color:#3ddc84">${facName}</b> in ${idealCity}, a move that saves ${fmt(t.idealSaving)} km.`;
     }
   }
 
@@ -797,7 +808,7 @@ renderMap();
         : `within ${fmt(t.idealSaving)} km of the nearest elite facility`;
       row.innerHTML=`<span class="bbrk">${i+1}</span>
         <span class="bbteam">${t.t}</span>
-        <span class="bbmove">Based in <b style="color:#cfd4e0">${chose}</b> — ${gap}</span>
+        <span class="bbmove">Based in <b style="color:#cfd4e0">${chose}</b>: ${gap}</span>
         <span class="bbtag">Nailed it</span>`;
     }else{
       row.innerHTML=`<span class="bbrk">${i+1}</span>
@@ -828,7 +839,7 @@ renderMap();
       const w=Math.max(2,Math.round(t[metric]/max*100));
       const v=metric==='f'?t.f.toFixed(1):fmt(t[metric]);
       const legs=t.venues.map(vn=>
-        `<div class="dl-line"><i>${vcity(vn.v)}</i>${vn.n>1?` ×${vn.n}`:''} — ${fmt(vn.km)} km from base${vn.tz?` · ${vn.tz} tz`:''}</div>`).join('');
+        `<div class="dl-line"><i>${vcity(vn.v)}</i>${vn.n>1?` ×${vn.n}`:''}: ${fmt(vn.km)} km from base${vn.tz?` · ${vn.tz} tz`:''}</div>`).join('');
       return `<div class="rrow" data-c="${t.code}">
         <div class="top">
           <span class="rk">${i+1}</span>
