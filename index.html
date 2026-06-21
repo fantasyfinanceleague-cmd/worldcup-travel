@@ -9,15 +9,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0a0e1a; --ink2:#141a2e; --paper:#f4f1ea; --paper2:#e8e3d6;
-  --line:#2a3147;
-  --hot:#ff3d3d; --hot2:#ff6b35; --gold:#ffd23f; --cyan:#2ee6d6; --grass:#3ddc84; --violet:#9d7cff;
-  --muted:#8a93ab;
+  /* Light "2026" theme: bright warm canvas, dark ink, vibrant purposeful accents */
+  --bg:#fbf7ef;          /* bright warm off-white canvas */
+  --bg2:#ffffff;         /* raised surfaces (cards) */
+  --bg3:#f1ebdd;         /* subtle tinted panels */
+  --ink:#16182a;         /* primary dark text */
+  --ink2:#ffffff;        /* (legacy name) raised surface = white now */
+  --paper:#16182a;       /* (legacy name) now the dark text color */
+  --paper2:#f1ebdd;
+  --line:#e2dccd;        /* hairlines on light */
+  --muted:#6b7080;       /* secondary text, legible on light */
+  /* accent palette drawn from the 2026 identity, tuned for light backgrounds */
+  --hot:#e8332e;         /* red */
+  --hot2:#f0612f;        /* orange */
+  --gold:#e0a417;        /* deepened gold so it reads on white */
+  --cyan:#0b9fb0;        /* teal, deepened for legibility */
+  --grass:#2bb673;       /* green */
+  --violet:#7b5cff;      /* purple/violet */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--ink); color:var(--paper);
+  background:var(--bg); color:var(--ink);
   font-family:'Archivo',system-ui,sans-serif; font-size:17px; line-height:1.6;
   -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
@@ -25,27 +38,28 @@ body{
 h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
 
 /* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:28px;height:60px}
-nav .brand{font-family:'Anton';font-size:22px;color:var(--gold);letter-spacing:.02em}
+nav .brand{font-family:'Anton';font-size:22px;color:var(--ink);letter-spacing:.02em}
 nav .brand span{color:var(--hot)}
 nav .links{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
 nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em;transition:color .2s}
-nav a:hover{color:var(--paper)}
+nav a:hover{color:var(--ink)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;padding:90px 0 70px;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(255,61,61,.18), transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(46,230,214,.14), transparent 45%);
+    radial-gradient(circle at 12% 18%, rgba(123,92,255,.10), transparent 42%),
+    radial-gradient(circle at 88% 72%, rgba(11,159,176,.10), transparent 46%),
+    radial-gradient(circle at 60% 10%, rgba(232,51,46,.07), transparent 40%);
   z-index:0}
 .hero .wrap{position:relative;z-index:1}
 .kicker{display:inline-block;background:var(--hot);color:#fff;font-weight:800;font-size:12px;
   letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:22px}
-.hero h1{font-size:clamp(54px,9vw,128px);color:var(--paper)}
-.hero h1 em{font-style:normal;color:var(--gold);display:block}
-.hero .sub{max-width:620px;margin-top:24px;font-size:19px;color:#cfd4e0}
+.hero h1{font-size:clamp(54px,9vw,128px);color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--hot);display:block}
+.hero .sub{max-width:620px;margin-top:24px;font-size:19px;color:var(--muted)}
 .hero .sub strong{color:var(--cyan);font-weight:700}
 .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
   border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:48px}
@@ -59,40 +73,42 @@ nav a:hover{color:var(--paper)}
 .tc-wrap{max-width:620px;margin:0 auto}
 .tc-pick{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
 .tc-pick label{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.tc-pick select{background:var(--ink2);color:var(--fg);border:1px solid var(--line);border-radius:8px;
+.tc-pick select{background:var(--ink2);color:var(--ink);border:1px solid var(--line);border-radius:8px;
   padding:10px 14px;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;cursor:pointer}
-.tcard{position:relative;background:linear-gradient(160deg,#11162a 0%,#0a0e1a 100%);
-  border:1px solid var(--line);border-radius:18px;padding:30px 32px;overflow:hidden}
-.tcard::before{content:'';position:absolute;top:-40%;right:-15%;width:340px;height:340px;
-  background:radial-gradient(circle,rgba(255,210,63,.10),transparent 70%);pointer-events:none}
-.tc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;position:relative}
-.tc-team{font-family:'Anton';font-size:42px;line-height:.95;letter-spacing:.5px}
+.tcard{position:relative;background:var(--bg2);
+  border:1px solid var(--line);border-radius:18px;padding:30px 32px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(22,24,42,.06)}
+.tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--hot),var(--hot2),var(--gold),var(--grass),var(--cyan),var(--violet));
+  pointer-events:none}
+.tc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;position:relative;margin-top:6px}
+.tc-team{font-family:'Anton';font-size:42px;line-height:.95;letter-spacing:.5px;color:var(--ink)}
 .tc-grp{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-top:6px}
-.tc-rank{flex:none;text-align:center;background:var(--ink2);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
-.tc-rank .rk{font-family:'Anton';font-size:30px;color:var(--gold);line-height:1}
+.tc-rank{flex:none;text-align:center;background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.tc-rank .rk{font-family:'Anton';font-size:30px;color:var(--hot);line-height:1}
 .tc-rank .rl{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:3px}
 .tc-hero{margin:22px 0 18px;position:relative}
-.tc-hero .big{font-family:'Anton';font-size:60px;line-height:.9;color:var(--gold)}
+.tc-hero .big{font-family:'Anton';font-size:60px;line-height:.9;color:var(--hot)}
 .tc-hero .unit{font-size:20px;color:var(--muted);margin-left:6px}
 .tc-hero .cap{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:6px}
 .tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
   border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:18px}
-.tc-grid .c{background:var(--ink2);padding:14px 12px;text-align:center}
-.tc-grid .c .v{font-family:'Anton';font-size:24px;color:var(--fg)}
+.tc-grid .c{background:var(--bg3);padding:14px 12px;text-align:center}
+.tc-grid .c .v{font-family:'Anton';font-size:24px;color:var(--ink)}
 .tc-grid .c .k{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:4px}
 .tc-base{font-size:14px;line-height:1.6;position:relative}
 .tc-base .row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line)}
 .tc-base .row:first-child{border-top:none}
 .tc-base .lbl{color:var(--muted)}
-.tc-base .val{font-weight:700;text-align:right}
+.tc-base .val{font-weight:700;text-align:right;color:var(--ink)}
 .tc-base .val.green{color:var(--grass)}
 .tc-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;
   font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 .tc-actions{display:flex;gap:10px;justify-content:center;margin-top:20px}
-.tc-btn{background:var(--gold);color:#0a0e1a;border:none;border-radius:8px;padding:11px 20px;
+.tc-btn{background:var(--hot);color:#fff;border:none;border-radius:8px;padding:11px 20px;
   font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:opacity .15s}
 .tc-btn:hover{opacity:.88}
-.tc-btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.tc-btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .tc-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;min-height:16px}
 @media(max-width:520px){.tc-team{font-size:34px}.tc-hero .big{font-size:46px}}
 
@@ -104,7 +120,7 @@ section{padding:72px 0;border-top:1px solid var(--line)}
   display:flex;align-items:center;justify-content:center;flex:none}
 .sec-head h2{font-size:clamp(32px,5vw,56px)}
 .sec-head h2 em{font-style:normal;color:var(--gold)}
-.lead{max-width:760px;color:#cfd4e0;font-size:18px;margin-bottom:36px}
+.lead{max-width:760px;color:var(--ink);font-size:18px;margin-bottom:36px}
 .lead strong{color:var(--cyan);font-weight:700}
 
 /* ---------- map ---------- */
@@ -112,7 +128,7 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 #flightmap{width:100%;display:block;height:auto;aspect-ratio:960/600}
 .map-controls{display:flex;gap:8px;flex-wrap:wrap;padding:16px;border-bottom:1px solid var(--line);align-items:center}
 .map-controls .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;margin-right:4px}
-select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--line);
+select.teamsel{background:var(--bg2);color:var(--ink);border:1px solid var(--line);
   border-radius:6px;padding:9px 12px;font-family:'Archivo';font-size:14px;font-weight:600;min-width:200px}
 .chip{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:20px;
   padding:7px 15px;font-family:'Archivo Narrow';font-weight:600;font-size:13px;text-transform:uppercase;
@@ -124,20 +140,20 @@ select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--l
 .dot-camp{background:var(--gold)}.dot-venue{background:var(--cyan)}
 .arc{stroke:var(--hot);fill:none;opacity:.85;stroke-linecap:round}
 .venue-dot{fill:var(--cyan)}.camp-dot{fill:var(--gold);stroke:var(--ink);stroke-width:1.5}
-.geo{fill:var(--ink2);stroke:var(--line);stroke-width:.6}
+.geo{fill:#eee8da;stroke:#d8d0bf;stroke-width:.6}
 .maplabel{font-family:'Archivo Narrow';font-size:10px;font-weight:600}
 
 /* ---------- group view ---------- */
 .group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
 .gcard{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:20px 22px;position:relative;overflow:hidden}
-.gcard .gtag{position:absolute;top:0;right:0;font-family:'Anton';font-size:54px;color:rgba(255,255,255,.05);padding:8px 18px;line-height:.8}
-.gcard h3{font-size:24px;color:var(--gold);margin-bottom:4px}
+.gcard .gtag{position:absolute;top:0;right:0;font-family:'Anton';font-size:54px;color:rgba(22,24,42,.05);padding:8px 18px;line-height:.8}
+.gcard h3{font-size:24px;color:var(--ink);margin-bottom:4px}
 .gcard .gmeta{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px}
 .trow{display:flex;align-items:center;gap:10px;margin:9px 0}
 .trow .tn{font-weight:700;font-size:14px;width:120px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.trow .tbarwrap{flex:1;background:rgba(255,255,255,.06);border-radius:4px;height:14px;overflow:hidden}
+.trow .tbarwrap{flex:1;background:rgba(22,24,42,.08);border-radius:4px;height:14px;overflow:hidden}
 .trow .tbar{display:block;height:100%;border-radius:4px}
-.trow .tv{font-family:'Archivo Narrow';font-weight:700;font-size:13px;width:62px;text-align:right;flex:none;color:#cfd4e0}
+.trow .tv{font-family:'Archivo Narrow';font-weight:700;font-size:13px;width:62px;text-align:right;flex:none;color:var(--ink)}
 .gband{font-size:12px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .gband b{color:var(--hot2);font-weight:700}
 
@@ -149,20 +165,20 @@ select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--l
 .dl-explain .b.floor .h{color:var(--cyan)}
 .dl-explain .b.pen .h{color:var(--hot)}
 .dl-explain .b.tot .h{color:var(--gold)}
-.dl-explain .b p{font-size:14px;color:#bcc3d4;line-height:1.5}
-.dlrow{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.dl-explain .b p{font-size:14px;color:var(--ink);line-height:1.5}
+.dlrow{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
 .dlrow .rk{font-family:'Anton';font-size:15px;color:var(--muted);width:26px;text-align:right;flex:none}
 .dlrow .nm{font-weight:700;font-size:15px;width:150px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dlrow .nm small{color:var(--muted);font-weight:600}
-.dlrow .stack{flex:1;height:22px;background:rgba(255,255,255,.05);border-radius:5px;overflow:hidden;display:flex}
+.dlrow .stack{flex:1;height:22px;background:rgba(22,24,42,.07);border-radius:5px;overflow:hidden;display:flex}
 .dlrow .seg-floor{background:var(--cyan);height:100%}
 .dlrow .seg-pen{background:var(--hot);height:100%}
 .dlrow .seg-saved{background:var(--grass);height:100%}
 .dlrow .seg-spread{background:linear-gradient(90deg,var(--cyan),var(--hot2));height:100%;border-radius:5px}
-.dl-note{background:linear-gradient(135deg,rgba(46,230,214,.12),rgba(255,107,53,.06));
+.dl-note{background:linear-gradient(135deg,rgba(11,159,176,.10),rgba(240,97,47,.06));
   border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:15px;
-  line-height:1.6;color:#cfd4e0;margin-bottom:26px}
-.dl-note b{color:var(--fg)}
+  line-height:1.6;color:var(--ink);margin-bottom:26px}
+.dl-note b{color:var(--ink)}
 .dl-star{color:var(--gold);font-weight:700}
 .dlrow .amt{font-family:'Archivo Narrow';font-weight:700;font-size:14px;width:96px;text-align:right;flex:none}
 .dlrow .amt.pos{color:var(--hot2)}.dlrow .amt.neg{color:var(--grass)}
@@ -171,15 +187,15 @@ select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--l
 
 /* ---------- best base ---------- */
 .bb-mapwrap{background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:22px}
-.bb-readout{font-family:'Archivo Narrow';font-size:14px;color:#cfd4e0;text-align:center;padding:8px 4px 4px;min-height:22px}
+.bb-readout{font-family:'Archivo Narrow';font-size:14px;color:var(--ink);text-align:center;padding:8px 4px 4px;min-height:22px}
 .bb-readout b{color:var(--gold)}
 .bb-grid{display:grid;grid-template-columns:1fr;gap:6px}
 .bbrow{display:flex;align-items:center;gap:14px;background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:12px 16px;cursor:pointer;transition:border-color .16s,background .16s}
 .bbrow:hover{border-color:var(--muted)}
-.bbrow.sel{border-color:var(--gold);background:#1a1e2e}
+.bbrow.sel{border-color:var(--gold);background:var(--bg3)}
 .bbrow .bbrk{font-family:'Anton';font-size:18px;color:var(--muted);width:30px;text-align:right;flex:none}
 .bbrow .bbteam{font-weight:700;min-width:120px;flex:none}
-.bbrow .bbmove{flex:1;font-size:14px;color:#cfd4e0;min-width:0}
+.bbrow .bbmove{flex:1;font-size:14px;color:var(--ink);min-width:0}
 .bbrow .bbmove .from{color:var(--hot2)}
 .bbrow .bbmove .to{color:var(--grass);font-weight:700}
 .bbrow .bbmove .arr{color:var(--muted);margin:0 8px}
@@ -199,22 +215,22 @@ select.teamsel{background:var(--ink);color:var(--paper);border:1px solid var(--l
 .rrow .nm small{color:var(--muted);font-weight:600;margin-left:4px}
 .rrow .val{font-family:'Anton';font-size:22px;color:var(--gold)}
 .rrow .val small{font-family:'Archivo';font-size:12px;color:var(--muted);font-weight:600}
-.rrow .barwrap{margin-top:9px;height:7px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
+.rrow .barwrap{margin-top:9px;height:7px;background:rgba(22,24,42,.08);border-radius:4px;overflow:hidden}
 .rrow .bar{height:100%;background:linear-gradient(90deg,var(--hot2),var(--hot));border-radius:4px}
 .rrow .detail{margin-top:14px;padding-top:13px;border-top:1px solid var(--line);display:none}
 .rrow.open .detail{display:block}
-.rrow .detail .dl-line{font-size:14px;color:#cfd4e0;margin:5px 0}
+.rrow .detail .dl-line{font-size:14px;color:var(--ink);margin:5px 0}
 .rrow .detail .dl-line i{color:var(--cyan);font-style:normal;font-weight:700}
 .rrow .detail .camp{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
 
 /* ---------- methodology ---------- */
 .method{columns:2;column-gap:40px}
-.method p{margin-bottom:16px;break-inside:avoid;font-size:15px;color:#bcc3d4}
-.method h3{font-size:18px;color:var(--gold);margin-bottom:10px;break-inside:avoid}
+.method p{margin-bottom:16px;break-inside:avoid;font-size:15px;color:var(--ink)}
+.method h3{font-size:18px;color:var(--hot);margin-bottom:10px;break-inside:avoid}
 .method code{background:var(--ink2);padding:2px 7px;border-radius:4px;font-size:13px;color:var(--cyan)}
 .src{font-size:13px;color:var(--muted)}.src a{color:var(--cyan)}
 footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:13px}
-.callout{background:linear-gradient(135deg,rgba(255,61,61,.12),rgba(255,107,53,.06));
+.callout{background:linear-gradient(135deg,rgba(232,51,46,.08),rgba(240,97,47,.05));
   border:1px solid var(--hot);border-radius:12px;padding:22px 26px;margin:30px 0;font-size:16px}
 .callout b{color:var(--gold)}
 
@@ -355,7 +371,7 @@ const VC=DATA.venueCity||{};
 const vcity=n=>VC[n]||n;   // FIFA venue name -> real stadium city
 const byCode={}; TEAMS.forEach(t=>byCode[t.code]=t);
 const fmt=n=>Math.round(n).toLocaleString();
-const GCOLORS=['#ff3d3d','#ff6b35','#ffd23f','#3ddc84','#2ee6d6','#9d7cff'];
+const GCOLORS=['#e8332e','#f0612f','#e0a417','#2bb673','#0b9fb0','#7b5cff'];
 
 /* ============ HERO STATS ============ */
 (function(){
@@ -498,7 +514,7 @@ function renderMap(){
   const venueCount=new Map(); // venue name -> times played (team view)
   const campSet=[];
   teams.forEach((t,ti)=>{
-    const col = mapMode.type==='group'?GCOLORS[ti%6]:'#ff3d3d';
+    const col = mapMode.type==='group'?GCOLORS[ti%6]:'#e8332e';
     const camp=project(t.blat,t.blon);
     campSet.push({p:camp,t,col});
     // Draw one arc from base camp to each distinct venue (one-way).
@@ -516,23 +532,23 @@ function renderMap(){
   // Draw venue dots + collect their labels.
   const labels=[];
   venuePts.forEach((p,name)=>{
-    g.appendChild(el('circle',{cx:p[0],cy:p[1],r:5,fill:'#2ee6d6'}));
+    g.appendChild(el('circle',{cx:p[0],cy:p[1],r:5,fill:'#0b9fb0'}));
     const n=venueCount.get(name)||1;
     const disp=vcity(name);
     const txt = (mapMode.type==='team' && n>1) ? `${disp}  ×${n}` : disp;
-    labels.push({anchorX:p[0],anchorY:p[1],text:txt,color:'#2ee6d6'});
+    labels.push({anchorX:p[0],anchorY:p[1],text:txt,color:'#0b9fb0'});
   });
   // In team view the single base label is always on, so include it in the pass.
   if(mapMode.type==='team'){
     campSet.forEach(({p,t})=>{
-      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5}));
-      labels.push({anchorX:p[0],anchorY:p[1],text:t.b,color:'#ffd23f',camp:true});
+      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:'#e0a417',stroke:'#ffffff','stroke-width':1.6}));
+      labels.push({anchorX:p[0],anchorY:p[1],text:t.b,color:'#e0a417',camp:true});
     });
   } else {
     // Group view: draw each team's base dot in that team's line color, with an
     // always-on team-name label so you can tell which dot is which team.
     campSet.forEach(({p,t,col})=>{
-      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:col,stroke:'#0a0e1a','stroke-width':1.5}));
+      g.appendChild(el('circle',{cx:p[0],cy:p[1],r:6,fill:col,stroke:'#ffffff','stroke-width':1.6}));
       labels.push({anchorX:p[0],anchorY:p[1],text:t.t,color:col,camp:true});
     });
   }
@@ -586,7 +602,7 @@ function addHoverDot(g,p,col,text,occupied){
     style:`fill:${col}`,'text-anchor':best.anchorStart?'start':'end',
     'font-weight':500,opacity:0});
   tx.textContent=text;
-  const dot=el('circle',{cx:p[0],cy:p[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5});
+  const dot=el('circle',{cx:p[0],cy:p[1],r:6,fill:'#e0a417',stroke:'#ffffff','stroke-width':1.6});
   const hit=el('circle',{cx:p[0],cy:p[1],r:12,fill:'transparent'});
   const show=()=>{tx.setAttribute('opacity',1);leader.setAttribute('opacity',0.5);};
   const hide=()=>{tx.setAttribute('opacity',0);leader.setAttribute('opacity',0);};
@@ -754,18 +770,18 @@ renderMap();
     t.venues.forEach(v=>{
       const vp=project(v.lat,v.lon);
       g.appendChild(el('path',{d:`M${ideal[0]},${ideal[1]} L${vp[0]},${vp[1]}`,
-        fill:'none',stroke:'#2ee6d6','stroke-width':1,opacity:0.32,'stroke-dasharray':'3 4'}));
+        fill:'none',stroke:'#0b9fb0','stroke-width':1,opacity:0.32,'stroke-dasharray':'3 4'}));
       lineSegs.push([ideal[0],ideal[1],vp[0],vp[1]]);
     });
     // the move: actual base -> ideal town
     if(!t.idealOptimal){
       g.appendChild(el('path',{d:`M${base[0]},${base[1]} L${ideal[0]},${ideal[1]}`,
-        fill:'none',stroke:'#ff6b35','stroke-width':2.4,'stroke-linecap':'round','stroke-dasharray':'2 6'}));
+        fill:'none',stroke:'#f0612f','stroke-width':2.4,'stroke-linecap':'round','stroke-dasharray':'2 6'}));
       lineSegs.push([base[0],base[1],ideal[0],ideal[1]]);
     }
     // ideal town (green) and actual base (gold)
-    g.appendChild(el('circle',{cx:ideal[0],cy:ideal[1],r:7,fill:'#3ddc84',stroke:'#0a0e1a','stroke-width':1.5}));
-    g.appendChild(el('circle',{cx:base[0],cy:base[1],r:6,fill:'#ffd23f',stroke:'#0a0e1a','stroke-width':1.5}));
+    g.appendChild(el('circle',{cx:ideal[0],cy:ideal[1],r:7,fill:'#2bb673',stroke:'#ffffff','stroke-width':1.6}));
+    g.appendChild(el('circle',{cx:base[0],cy:base[1],r:6,fill:'#e0a417',stroke:'#ffffff','stroke-width':1.6}));
     // venue dots LAST so they're never hidden behind the ideal/base dots.
     // If a venue sits on top of the ideal dot, nudge it so both stay visible.
     const labels=[];
@@ -773,15 +789,15 @@ renderMap();
       let vp=project(v.lat,v.lon);
       const onIdeal = Math.hypot(vp[0]-ideal[0],vp[1]-ideal[1])<10;
       if(onIdeal){ vp=[vp[0]+9,vp[1]+9]; }   // nudge clear of the green dot
-      g.appendChild(el('circle',{cx:vp[0],cy:vp[1],r:5,fill:'#2ee6d6',stroke:'#0a0e1a','stroke-width':1.2}));
+      g.appendChild(el('circle',{cx:vp[0],cy:vp[1],r:5,fill:'#0b9fb0',stroke:'#ffffff','stroke-width':1.4}));
       const nm=vcity(v.v)+(v.n>1?`  ×${v.n}`:'');
-      labels.push({anchorX:vp[0],anchorY:vp[1],text:nm,color:'#2ee6d6'});
+      labels.push({anchorX:vp[0],anchorY:vp[1],text:nm,color:'#0b9fb0'});
     });
     // labels via the shared collision-aware placer
     const facName=t.idealFacility;
     const idealCity=t.idealCity.split(',')[0];
-    labels.push({anchorX:ideal[0],anchorY:ideal[1],text:`Ideal: ${facName}`,color:'#3ddc84'},
-                {anchorX:base[0],anchorY:base[1],text:`Actual: ${t.b.split(',')[0]}`,color:'#ffd23f'});
+    labels.push({anchorX:ideal[0],anchorY:ideal[1],text:`Ideal: ${facName}`,color:'#2bb673'},
+                {anchorX:base[0],anchorY:base[1],text:`Actual: ${t.b.split(',')[0]}`,color:'#e0a417'});
     placeLabels(labels,g,lineSegs);
     if(t.idealOptimal){
       const gap = t.idealSaving<0
@@ -789,7 +805,7 @@ renderMap();
         : `within ${fmt(t.idealSaving)} km of the closest elite facility`;
       readout.innerHTML=`<b>${t.t}</b> nailed it, based in ${t.b.split(',')[0]}, ${gap} (${facName}, ${idealCity}).`;
     }else{
-      readout.innerHTML=`<b>${t.t}</b> based in ${t.b.split(',')[0]} · the closest elite training base was <b style="color:#3ddc84">${facName}</b> in ${idealCity}, a move that saves ${fmt(t.idealSaving)} km.`;
+      readout.innerHTML=`<b>${t.t}</b> based in ${t.b.split(',')[0]} · the closest elite training base was <b style="color:#2bb673">${facName}</b> in ${idealCity}, a move that saves ${fmt(t.idealSaving)} km.`;
     }
   }
 
@@ -808,7 +824,7 @@ renderMap();
         : `within ${fmt(t.idealSaving)} km of the nearest elite facility`;
       row.innerHTML=`<span class="bbrk">${i+1}</span>
         <span class="bbteam">${t.t}</span>
-        <span class="bbmove">Based in <b style="color:#cfd4e0">${chose}</b>: ${gap}</span>
+        <span class="bbmove">Based in <b style="color:var(--ink)">${chose}</b>: ${gap}</span>
         <span class="bbtag">Nailed it</span>`;
     }else{
       row.innerHTML=`<span class="bbrk">${i+1}</span>
